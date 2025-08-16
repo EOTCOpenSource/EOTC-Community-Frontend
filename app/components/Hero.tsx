@@ -24,7 +24,7 @@ export default function Hero() {
           </Link>
         </div>
 
-        <div className="relative flex-1 flex justify-center items-center mb-8 md:mb-0">
+        <div className="relative flex-1 flex justify-center items-center mr-14 mb-8 md:mb-0">
           <div 
             className="absolute bg-[#721111] z-0"
             style={{

@@ -1,5 +1,4 @@
 'use client';
-
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -15,21 +14,23 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center space-x-[79px]">
-          <div className="flex space-x-8 text-[#721111] font-medium">
-            <Link href="#" className="hover:opacity-80 transition">Projects</Link>
-            <Link href="#" className="hover:opacity-80 transition">Our Mission</Link>
-          </div>
+  <div className="flex space-x-8 text-[#721111] font-medium">
+    <Link href="#" className="hover:opacity-80 transition">Projects</Link>
+    <Link href="#" className="hover:opacity-80 transition">Our Mission</Link>
+  </div>
 
-          <div className="flex items-center px-8 bg-[#721111] text-white space-x-6 rounded">
-            <Link href="#" className="hover:opacity-80 transition">GitHub</Link>
-            <Image src="/EOTC_languages.png" alt="Languages" width={24} height={24} />
-            <Image src="/Toggle.png" alt="Toggle" width={24} height={24} />
-          </div>
+  <div className="flex-1 flex justify-center">
+    <div className="flex items-center w-[301] px-16 py-7 pl-11 bg-[#721111] text-white space-x-4">
+      <Link href="#" className="hover:opacity-80 transition">GitHub</Link>
+      <Image src="/EOTC_languages.png" alt="Languages" width={24} height={24} />
+      <Image src="/Toggle.png" alt="Toggle" width={24} height={24} />
+    </div>
+  </div>  
 
-          <Link href="#" className="bg-[#721111] hover:bg-[#5a0d0d] text-white font-bold py-2 px-6 rounded-full transition-colors shadow-lg">
-            Join us
-          </Link>
-        </div>
+  <Link href="#" className="bg-[#721111] hover:bg-[#5a0d0d] text-white font-bold py-2 px-6 rounded-full transition-colors shadow-lg">
+    Join us
+  </Link>
+</div>
 
         <button className="md:hidden text-gray-800" onClick={() => setIsOpen(!isOpen)}>
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
