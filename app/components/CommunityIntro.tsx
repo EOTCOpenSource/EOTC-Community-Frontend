@@ -1,8 +1,17 @@
 'use client';
+
 import Image from 'next/image';
 
+// Define the type for a channel
+interface Channel {
+  id: number;
+  name: string;
+  description: string;
+  image: string;
+}
+
 export default function CommunityIntro() {
-  const channels = [
+  const channels: Channel[] = [
     {
       id: 1,
       name: "Introduction",
@@ -21,7 +30,6 @@ export default function CommunityIntro() {
       description: "Share designs and logos and UI design here.",
       image: "/EOTC_Design.png"
     },
-    
     {
       id: 7,
       name: "Help and Questions",
@@ -46,7 +54,6 @@ export default function CommunityIntro() {
       description: "For working on text and translation.",
       image: "/EOTC_Content.png"
     },
-    
     {
       id: 8,
       name: "Faith and Resources",
@@ -58,8 +65,6 @@ export default function CommunityIntro() {
   return (
     <section className="w-full bg-[#F9FAFB] py-16 px-6 md:px-12 relative">
       <div className="container mx-auto max-w-6xl relative">
-
-
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#721111] mb-4">
             Welcome to the EOTC OpenSource Telegram Community!
@@ -69,33 +74,32 @@ export default function CommunityIntro() {
           </p>
         </div>
 
+        <div className="relative mt-12 mb-20">
+          <div 
+            className="absolute hidden md:block bg-[#721111] w-[100px] rounded-[10px]"
+            style={{
+              left: '50%',
+              top: "-50px",
+              bottom: "-50px",
+              transform: 'translateX(-50%)',
+            }}
+          ></div>
 
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-64 gap-y-12 relative z-10">
+            <div className="space-y-12">
+              {channels.slice(0, 4).map((channel) => (
+                <ChannelItem key={channel.id} channel={channel} />
+              ))}
+            </div>
+            
+            <div className="space-y-12 mt-12">
+              {channels.slice(4).map((channel) => (
+                <ChannelItem key={channel.id} channel={channel} />
+              ))}
+            </div>
+          </div>
+        </div>
 
-<div className="relative mt-12 mb-20">
-  <div 
-    className="absolute hidden md:block bg-[#721111] w-[100px] rounded-[10px]"
-    style={{
-      left: '50%',
-      top: "-50px",
-      bottom: "-50px",
-      transform: 'translateX(-50%)',
-    }}
-  ></div>
-
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-64 gap-y-12 relative z-10">
-    <div className="space-y-12">
-      {channels.slice(0, 4).map((channel) => (
-        <ChannelItem key={channel.id} channel={channel} />
-      ))}
-    </div>
-    
-    <div className="space-y-12 mt-12">
-      {channels.slice(4).map((channel) => (
-        <ChannelItem key={channel.id} channel={channel} />
-      ))}
-    </div>
-  </div>
-</div>
         <div className="text-center mt-20">
           <p className="text-lg text-gray-700">
             We are excited to build things with you.<br />
@@ -107,8 +111,7 @@ export default function CommunityIntro() {
   );
 }
 
-// Channel item component
-function ChannelItem({ channel }: { channel: any }) {
+function ChannelItem({ channel }: { channel: Channel }) {
   return (
     <div className="flex items-start space-x-6">
       <div className="flex-shrink-0 mt-6">
