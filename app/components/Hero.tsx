@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="relative w-full bg-gray-50 pt-12 pb-16 overflow-hidden">
+    <section className="relative w-full bg-gray-50 pt-28 pb-24 overflow-hidden">
       <div className="relative z-10 w-full h-full flex flex-col md:flex-row items-center justify-center px-10">
         
         <div className="text-center md:text-left max-w-2xl space-y-6 md:mr-12 ml-36 flex-1">
