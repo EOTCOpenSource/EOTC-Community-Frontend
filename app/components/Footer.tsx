@@ -40,8 +40,4 @@ export default function Footer() {
       </div>
     </footer>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 88d312c (color customization)
