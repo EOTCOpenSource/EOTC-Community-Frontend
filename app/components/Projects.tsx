@@ -74,8 +74,8 @@ export default function Projects() {
             OUR PROJECTS
           </h2>
           <p className="text-xl md:text-2xl text-gray-600 max-w-2xl mx-auto">
-            Here's what we're building right now. Your help is needed!
-          </p>
+  Here&apos;s what we&apos;re building right now. Your help is needed!
+</p>
         </div>
 
         <div className="flex flex-wrap justify-center gap-4 mb-12">
