@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import CommunityIntro from "./components/CommunityIntro";
 import Purpose from "./components/Purpose";
+import Projects from "./components/Projects";
 
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
     <Navbar />
     <Hero />
     <CommunityIntro />
+    <Projects />
     <Purpose />
     <Footer />
     </>
