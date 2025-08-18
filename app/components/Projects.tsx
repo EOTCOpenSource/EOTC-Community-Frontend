@@ -108,12 +108,10 @@ export default function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {filteredProjects.map((project) => (
             <div key={project.id} className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-md transition-all">
-              {/* <div className="flex items-center gap-2 mb-3"> */}
                 
                 <span className="text-sm font-medium text-[#721111] uppercase tracking-wider">
                   {project.status}
                 </span>
-              {/* </div> */}
               <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
               <p className="text-gray-600 mb-4">{project.description}</p>
               
