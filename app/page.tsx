@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import CommunityIntro from "./components/CommunityIntro";
+import Purpose from "./components/Purpose";
 
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
     <Navbar />
     <Hero />
     <CommunityIntro />
+    <Purpose />
     <Footer />
     </>
   );
