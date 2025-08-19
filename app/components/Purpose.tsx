@@ -36,12 +36,7 @@ export default function Purpose() {
             <p className="text-gray-600 mb-6 flex-grow">
               To build open-source digital tools that support the Church, its followers, and its sacred traditions.
             </p>
-            <Link 
-              href="#" 
-              className="mt-auto bg-[#721111] hover:bg-[#5a0d0d] text-white font-bold py-2 px-6 rounded-full transition-colors inline-block text-sm md:text-base"
-            >
-              Get Started
-            </Link>
+           
           </div>
 
           <div className="flex-1 bg-white rounded-xl p-8 flex flex-col items-center text-center border border-gray-200 hover:shadow-md transition-all">
@@ -64,12 +59,7 @@ export default function Purpose() {
             <p className="text-gray-600 mb-6 flex-grow">
               To empower our community by making spiritual and cultural resources more accessible for generations to come.
             </p>
-            <Link 
-              href="#" 
-              className="mt-auto bg-[#721111] hover:bg-[#5a0d0d] text-white font-bold py-2 px-6 rounded-full transition-colors inline-block text-sm md:text-base"
-            >
-              Get Started
-            </Link>
+           
           </div>
 
           <div className="flex-1 bg-white rounded-xl p-8 flex flex-col items-center text-center border border-gray-200 hover:shadow-md transition-all">
@@ -93,12 +83,7 @@ export default function Purpose() {
               Make your faith with your skills.<br />
               Collaborate with like-minded individuals to create a lasting digital legacy.
             </p>
-            <Link 
-              href="#" 
-              className="mt-auto bg-[#721111] hover:bg-[#5a0d0d] text-white font-bold py-2 px-6 rounded-full transition-colors inline-block text-sm md:text-base"
-            >
-              Get Started
-            </Link>
+          
           </div>
         </div>
       </div>
