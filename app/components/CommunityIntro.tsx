@@ -1,13 +1,14 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
-// Define the type for a channel
 interface Channel {
   id: number;
   name: string;
   description: string;
   image: string;
+  link: string;
 }
 
 export default function CommunityIntro() {
@@ -16,49 +17,57 @@ export default function CommunityIntro() {
       id: 1,
       name: "Introduction",
       description: "Say hello here. Tell us your name and why you joined.",
-      image: "/EOTC_Introduction.png"
+      image: "/EOTC_Introduction.png",
+      link: "https://t.me/EOTCOpenSource/7"
     },
     {
       id: 3,
       name: "Project-ideas",
       description: "Share your new ideas for projects here.",
-      image: "/EOTC_ProjectIdeas.png"
+      image: "/EOTC_ProjectIdeas.png",
+      link: "https://t.me/EOTCOpenSource/15"
     },
     {
       id: 5,
       name: "Design or UI/UX",
       description: "Share designs and logos and UI design here.",
-      image: "/EOTC_Design.png"
+      image: "/EOTC_Design.png",
+      link: "https://t.me/EOTCOpenSource/492"
     },
     {
       id: 7,
       name: "Help and Questions",
       description: "If you need help, ask here.",
-      image: "/EOTC_Help.png"
+      image: "/EOTC_Help.png",
+      link: "https://t.me/EOTC_Support"
     },
     {
       id: 2,
       name: "Announcements",
       description: "Important news from the admins.",
-      image: "/EOTC_Announcement.png"
+      image: "/EOTC_Announcement.png",
+      link: "https://t.me/EOTCOpenSource/4"
     },
     {
       id: 4,
       name: "Development",
       description: "Talk about code and computers here.",
-      image: "/EOTC_Dev't.png"
+      image: "/EOTC_Dev't.png",
+      link: "https://t.me/EOTCOpenSource/17"
     },
     {
       id: 6,
       name: "Content and Writing",
       description: "For working on text and translation.",
-      image: "/EOTC_Content.png"
+      image: "/EOTC_Content.png",
+      link: "https://t.me/EOTCOpenSource/21"
     },
     {
       id: 8,
       name: "Faith and Resources",
       description: "Share links about our faith here.",
-      image: "/EOTC_Resources.png"
+      image: "/EOTC_Resources.png",
+      link: "https://t.me/EOTCOpenSource/26"
     }
   ];
 
@@ -125,7 +134,9 @@ function ChannelItem({ channel }: { channel: Channel }) {
       </div>
       <div className="mt-[-20px]">
         <h3 className="text-xl font-bold text-[#721111] mb-10">
-          {channel.id}. {channel.name}
+          <Link href={channel.link} target="_blank" rel="noopener noreferrer" className="hover:underline">
+            {channel.id}. {channel.name}
+          </Link>
         </h3>
         <p className="text-gray-600 mt-0.5">
           {channel.description}
