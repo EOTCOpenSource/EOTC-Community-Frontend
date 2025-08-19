@@ -100,13 +100,13 @@ export default function Projects() {
     
   };
   const handleFilterClick = (type: 'status' | 'projectType', value: string) => {
-    setForceShowAll(false);
-    if (type === 'status') {
-      setActiveTab(value as any);
-    } else {
-      setActiveType(value as any);
-    }
-  };
+  setForceShowAll(false);
+  if (type === 'status') {
+    setActiveTab(value as 'all' | 'active' | 'completed' | 'pending');
+  } else {
+    setActiveType(value as 'all' | 'website' | 'application');
+  }
+};
 
   return (
     <section className="w-full bg-white py-16 md:py-24 px-6 md:px-12">
@@ -116,8 +116,8 @@ export default function Projects() {
             OUR PROJECTS
           </h2>
           <p className="text-xl md:text-2xl text-gray-600 max-w-2xl mx-auto">
-            Here's what we're building right now. Your help is needed!
-          </p>
+  Here&apos;s what we&apos;re building right now. Your help is needed!
+</p>
         </div>
 
         <div className="flex flex-wrap justify-center gap-4 mb-6">
