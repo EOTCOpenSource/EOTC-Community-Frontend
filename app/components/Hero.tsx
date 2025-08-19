@@ -37,7 +37,7 @@ export default function Hero() {
               A collaborative community building open-source digital tools for the Ethiopian Orthodox Tewahedo Church.
             </p>
             <Link 
-              href="#"
+              href="https://t.me/EOTCOpenSource"
               className="mt-8 bg-[#721111] hover:bg-[#5a0d0d] text-white font-bold py-3 px-8 rounded-full transition-colors inline-block"
             >
               Join our Telegram Community

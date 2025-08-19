@@ -21,13 +21,13 @@ export default function Navbar() {
 
   <div className="flex-1 flex justify-center">
     <div className="flex items-center w-[301] px-16 py-7 pl-11 bg-[#721111] text-white space-x-4">
-      <Link href="#" className="hover:opacity-80 transition">GitHub</Link>
+      <Link href="https://github.com/EOTCOpenSource" className="hover:opacity-80 transition">GitHub</Link>
       <Image src="/EOTC_languages.png" alt="Languages" width={24} height={24} />
       <Image src="/Toggle.png" alt="Toggle" width={24} height={24} />
     </div>
   </div>  
 
-  <Link href="#" className="bg-[#721111] hover:bg-[#5a0d0d] text-white font-bold py-2 px-6 rounded-full transition-colors shadow-lg">
+  <Link href="https://t.me/EOTCOpenSource" className="bg-[#721111] hover:bg-[#5a0d0d] text-white font-bold py-2 px-6 rounded-full transition-colors shadow-lg">
     Join us
   </Link>
 </div>
