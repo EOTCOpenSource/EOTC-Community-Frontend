@@ -64,9 +64,9 @@ export default function Hero() {
             </Link>
           </div>
 
-          <div className="hidden md:block relative flex-1  justify-center items-center mr-14 mb-8 md:mb-0">
+          <div className="hidden md:block relative flex-1 justify-center items-center mb-8 md:mb-0">
             <div 
-              className="absolute bg-[#721111] z-0"
+              className="absolute bg-[#721111] z-0 mx-auto"
               style={{
                 width: '700px',
                 height: '250px',
