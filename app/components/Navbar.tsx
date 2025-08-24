@@ -5,6 +5,13 @@ import Image from 'next/image';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsOpen(false);
+  };
   
   return (
     <nav className="fixed top-0 left-0 right-0 w-full h-[80px] bg-white shadow-md z-50">
@@ -16,8 +23,18 @@ export default function Navbar() {
 
         <div className="hidden md:flex items-center h-full">
           <div className="flex space-x-8 text-[#721111] font-medium mr-[79px]">
-            <Link href="#" className="hover:opacity-80 transition">Projects</Link>
-            <Link href="#" className="hover:opacity-80 transition">Our Mission</Link>
+            <button 
+              onClick={() => scrollToSection('projects-section')} 
+              className="hover:opacity-80 transition cursor-pointer"
+            >
+              Projects
+            </button>
+            <button 
+              onClick={() => scrollToSection('purpose-section')} 
+              className="hover:opacity-80 transition cursor-pointer"
+            >
+              Our Mission
+            </button>
           </div>
 
           <div className="flex items-center justify-center h-full bg-[#721111] pl-12 pr-11">
@@ -52,20 +69,18 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div className={`md:hidden bg-white shadow-lg transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
         <div className="container mx-auto px-6 py-4 space-y-4">
-          <Link 
-            href="#" 
-            className="block text-[#721111] font-medium py-2 px-4 rounded-lg hover:bg-gray-50 transition-colors"
-            onClick={() => setIsOpen(false)}
+          <button 
+            onClick={() => scrollToSection('projects-section')} 
+            className="block text-[#721111] font-medium py-2 px-4 rounded-lg hover:bg-gray-50 transition-colors w-full text-left"
           >
             Projects
-          </Link>
-          <Link 
-            href="#" 
-            className="block text-[#721111] font-medium py-2 px-4 rounded-lg hover:bg-gray-50 transition-colors"
-            onClick={() => setIsOpen(false)}
+          </button>
+          <button 
+            onClick={() => scrollToSection('purpose-section')} 
+            className="block text-[#721111] font-medium py-2 px-4 rounded-lg hover:bg-gray-50 transition-colors w-full text-left"
           >
             Our Mission
-          </Link>
+          </button>
           <Link 
             href="https://github.com/EOTCOpenSource" 
             className="block text-[#721111] font-medium py-2 px-4 rounded-lg hover:bg-gray-50 transition-colors"
@@ -74,6 +89,7 @@ export default function Navbar() {
             GitHub
           </Link>
           
+          {/* Mobile-specific icons with proper color */}
           <div className="flex items-center space-x-6 py-2 px-4">
             <div className="flex items-center space-x-2">
               <Image 
@@ -82,6 +98,7 @@ export default function Navbar() {
                 width={24} 
                 height={24}
               />
+              <span className="text-[#721111] text-sm">Language</span>
             </div>
             <div className="flex items-center space-x-2">
               <Image 
@@ -90,6 +107,7 @@ export default function Navbar() {
                 width={24} 
                 height={24}
               />
+              <span className="text-[#721111] text-sm">Theme</span>
             </div>
           </div>
           

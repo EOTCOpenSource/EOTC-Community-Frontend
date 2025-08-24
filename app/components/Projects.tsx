@@ -109,7 +109,7 @@ export default function Projects() {
 };
 
   return (
-    <section className="w-full bg-white py-16 md:py-24 px-6 md:px-12">
+    <section id='projects-section' className="w-full bg-white py-16 md:py-24 px-6 md:px-12">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
