@@ -74,7 +74,10 @@ export default function Hero() {
                 left: '50%', 
                 transform: 'translate(-50%, -50%) rotate(90deg)',
               }}
-            ></div>
+            >
+             
+            </div>
+            
             <div className="relative z-10">
               <Image 
                 src="/EOTC_church.png" 

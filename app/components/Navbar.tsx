@@ -89,7 +89,6 @@ export default function Navbar() {
             GitHub
           </Link>
           
-          {/* Mobile-specific icons with proper color */}
           <div className="flex items-center space-x-6 py-2 px-4">
             <div className="flex items-center space-x-2">
               <Image 
@@ -98,7 +97,6 @@ export default function Navbar() {
                 width={24} 
                 height={24}
               />
-              <span className="text-[#721111] text-sm">Language</span>
             </div>
             <div className="flex items-center space-x-2">
               <Image 
@@ -107,7 +105,6 @@ export default function Navbar() {
                 width={24} 
                 height={24}
               />
-              <span className="text-[#721111] text-sm">Theme</span>
             </div>
           </div>
           
