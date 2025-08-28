@@ -80,7 +80,7 @@ export default function Hero() {
               href="https://t.me/EOTCOpenSource"
               className="mt-8 bg-primary hover:bg-primary-600 text-white font-bold py-3 px-8 rounded-full transition-colors inline-block"
             >
-              Join our Telegram Community
+              Join Telegram 
             </Link>
           </div>
 
