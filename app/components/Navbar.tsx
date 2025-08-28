@@ -154,10 +154,10 @@ export default function Navbar() {
           </button>
           <Link
             href="https://github.com/EOTCOpenSource"
-            className="block text-primary font-medium py-2 px-4 rounded-lg hover:bg-gray-50 transition-colors"
+            className="flex gap-1 text-primary font-medium py-2 px-4 rounded-lg hover:bg-gray-50 transition-colors"
             onClick={() => setIsOpen(false)}
           >
-            GitHub
+            <Users/> {gitMembers + " members"}
           </Link>
 
           <div className="flex items-center space-x-6 py-2 px-4">

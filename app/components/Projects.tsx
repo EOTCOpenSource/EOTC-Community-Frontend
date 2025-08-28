@@ -217,8 +217,8 @@ export default function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           
           <Fade
-            delay={200} 
-            duration={1000} 
+            delay={100} 
+            duration={600} 
             triggerOnce
             fraction={0.5}
             cascade
