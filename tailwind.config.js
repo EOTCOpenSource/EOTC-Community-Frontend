@@ -10,8 +10,8 @@ module.exports = {
       colors:{
         primary: {
           DEFAULT: '#721111', // burgenday // dont check my spelling
-          100: '#60A5FA', 
-          200: '#1E3A8A', 
+          600: '#60A5FA',  // darker
+          800: '#1E3A8A',  // darkest
         }
       }
     },

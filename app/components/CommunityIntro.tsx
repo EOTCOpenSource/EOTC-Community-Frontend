@@ -75,7 +75,7 @@ export default function CommunityIntro() {
     <section className="w-full bg-[#F9FAFB] py-16 px-6 md:px-12 relative">
       <div className="container mx-auto max-w-6xl relative">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#721111] mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
             Welcome to the EOTC OpenSource Telegram Community!
           </h2>
           <p className="text-lg text-gray-700">
@@ -85,14 +85,21 @@ export default function CommunityIntro() {
 
         <div className="relative mt-12 mb-20">
           <div 
-            className="absolute hidden md:block bg-[#721111] w-[100px] rounded-[10px]"
+            className="absolute hidden md:flex flex-col items-center pt-14 gap-16 bg-primary w-[100px] overflow-hidden rounded-[10px]"
             style={{
               left: '50%',
               top: "-50px",
               bottom: "-50px",
               transform: 'translateX(-50%)',
             }}
-          ></div>
+          >
+            <span className='w-1 h-[5rem] bg-white'></span>
+            <span className='w-1 h-[5rem] bg-white'></span>
+            <span className='w-1 h-[5rem] bg-white'></span>
+            <span className='w-1 h-[5rem] bg-white'></span>
+            <span className='w-1 h-[5rem] bg-white'></span>
+            <span className='w-1 h-[5rem] bg-white'></span>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-64 gap-y-12 relative z-10">
             <div className="space-y-12">
@@ -133,7 +140,7 @@ function ChannelItem({ channel }: { channel: Channel }) {
         />
       </div>
       <div className="mt-[-20px]">
-        <h3 className="text-xl font-bold text-[#721111] mb-10">
+        <h3 className="text-xl font-bold text-primary mb-10">
           <Link href={channel.link} target="_blank" rel="noopener noreferrer" className="hover:underline">
             {channel.id}. {channel.name}
           </Link>
