@@ -66,13 +66,13 @@ export default function Hero() {
 
           <div className="hidden md:block relative flex-1 justify-center items-center mb-8 md:mb-0">
             <div 
-              className="absolute bg-[#721111] z-0 mx-auto"
+              className="absolute bg-primary z-0 mx-auto"
               style={{
                 width: '700px',
                 height: '250px',
                 top: '50%', 
                 left: '50%', 
-                transform: 'translate(-50%, -50%) rotate(90deg)',
+                transform: 'translate(-55%, -50%) rotate(90deg)',
               }}
             >
              
@@ -84,7 +84,7 @@ export default function Hero() {
                 alt="EOTC Church" 
                 width={600} 
                 height={400} 
-                className="mx-auto"
+                className="mx-auto -translate-x-8"
               />
             </div>
           </div>

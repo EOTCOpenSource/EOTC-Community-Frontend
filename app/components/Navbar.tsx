@@ -14,15 +14,15 @@ export default function Navbar() {
   };
   
   return (
-    <nav className="fixed top-0 left-0 right-0 w-full h-[80px] bg-white shadow-md z-50">
-      <div className="container mx-auto flex items-center justify-between h-full px-6 md:px-12">
-        <div className="flex items-center space-x-4 md:space-x-[79px]">
+    <nav className="fixed top-0 left-0 right-0 w-full h-[80px] bg-transparent shadow-md z-50">
+      <div className=" mx-auto flex items-center justify-between h-full px-6 md:px-12">
+        <div className="flex items-center space-x-4 md:space-x-[59px]">
           <Image src="/EOTC_logo.png" alt="EOTC Logo" width={40} height={40} />
           <span className="text-2xl font-bold text-[#721111]">EOTC OpenSource</span>
         </div>
 
-        <div className="hidden md:flex items-center h-full">
-          <div className="flex space-x-8 text-[#721111] font-medium mr-[79px]">
+        <div className="hidden md:flex items-center gap-24 h-full">
+          <div className="flex gap-8 text-[#721111] font-medium">
             <button 
               onClick={() => scrollToSection('projects-section')} 
               className="hover:opacity-80 transition cursor-pointer"
@@ -37,7 +37,7 @@ export default function Navbar() {
             </button>
           </div>
 
-          <div className="flex items-center justify-center h-full bg-[#721111] pl-12 pr-11">
+          <div className="flex items-center justify-center h-full mx-6">
             <div className="flex items-center text-white space-x-6">
               <Link href="https://github.com/EOTCOpenSource" className="hover:opacity-80 transition">GitHub</Link>
               <Image src="/EOTC_languages.png" alt="Languages" width={24} height={24} />
@@ -45,7 +45,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          <Link href="https://t.me/EOTCOpenSource" className="bg-[#721111] hover:bg-[#5a0d0d] text-white font-bold py-2 px-6 rounded-full transition-colors shadow-lg ml-[79px]">
+          <Link href="https://t.me/EOTCOpenSource" className="bg-primary text-white font-bold py-2 px-6 rounded-full transition-colors shadow-lg">
             Join us
           </Link>
         </div>
