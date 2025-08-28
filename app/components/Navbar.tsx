@@ -34,14 +34,14 @@ export default function Navbar() {
   };
   
   return (
-    <nav className={`fixed top-0 ${scrolled ? "backdrop-blur-md" : ""} left-0 right-0 w-full h-[80px]  shadow-md z-50`}>
+    <nav className={`fixed top-0 ${scrolled ? "backdrop-blur-md bg-[#ffffff25]  shadow-md" : ""} left-0 right-0 w-full h-[80px] z-50`}>
       <div className=" mx-auto flex items-center justify-between h-full px-6 md:px-4 lg:px-12">
         <div className="flex items-center">
           <Image src="/EOTC_logo.png" alt="EOTC Logo" width={40} height={40} />
           <span className="text-2xl font-bold text-primary">EOTC OpenSource</span>
         </div>
 
-        <div className="hidden md:flex items-center lg:gap-24 md:gap-24 h-full">
+        <div className="hidden md:flex items-center lg:gap-24 md:gap-20 h-full">
           <div className="flex gap-8 text-primary font-medium">
             <button 
               onClick={() => scrollToSection('projects-section')} 
@@ -58,7 +58,7 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center justify-center h-full mx-6">
-            <div className={`flex items-center ${scrolled ? "text-primary" :"text-white"} space-x-6`}>
+            <div className={`flex items-center gap-6 ${scrolled ? "text-primary" :"text-white"}`}>
               <Link href="https://github.com/EOTCOpenSource" className="hover:opacity-80 transition">GitHub</Link>
               <Languages width={24} height={24} className="hover:opacity-80 transition cursor-pointer"/>
               <Moon width={24} height={24} className="hover:opacity-80 transition cursor-pointer"/>              

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Fade } from "react-awesome-reveal";
 
 type Project = {
   id: number;
@@ -120,12 +121,21 @@ export default function Projects() {
     >
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            OUR PROJECTS
-          </h2>
-          <p className="text-xl md:text-2xl text-gray-600 max-w-2xl mx-auto">
-            Here&apos;s what we&apos;re building right now. Your help is needed!
-          </p>
+          <Fade
+            delay={200} 
+            duration={1000} 
+            triggerOnce
+            fraction={0.5}
+            cascade
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              OUR PROJECTS
+            </h2>
+            <p className="text-xl md:text-2xl text-gray-600 max-w-2xl mx-auto">
+              Here&apos;s what we&apos;re building right now. Your help is
+              needed!
+            </p>
+          </Fade>
         </div>
 
         <div className="flex flex-wrap justify-center gap-4 mb-6">
@@ -205,6 +215,14 @@ export default function Projects() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          
+          <Fade
+            delay={200} 
+            duration={1000} 
+            triggerOnce
+            fraction={0.5}
+            cascade
+          >
           {filteredProjects.map((project) => (
             <div
               key={project.id}
@@ -248,6 +266,7 @@ export default function Projects() {
               </div>
             </div>
           ))}
+          </Fade>
         </div>
 
         <div className="text-center">
