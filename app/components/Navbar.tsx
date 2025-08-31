@@ -55,61 +55,63 @@ export default function Navbar() {
       } left-0 right-0 w-full h-[80px] z-50`}
     >
       <div className=" mx-auto flex items-center justify-between h-full px-6 md:px-4 lg:px-12">
-        <div className="flex items-center">
-          <Image src="/EOTC_logo.png" alt="EOTC Logo" width={40} height={40} />
-          <span className="text-2xl font-bold text-primary">
-            EOTC OpenSource
-          </span>
+        <div className="flex items-center gap-4 md:gap-0 justify-between w-full">
+          <div className="flex items-center">
+            <Image src="/EOTC_logo.png" alt="EOTC Logo" width={40} height={40} />
+            <span className="text-2xl font-bold text-primary">
+              EOTC OpenSource
+            </span>
+          </div>
+          <div className="hidden md:flex justify-around flex-1 md:pl-10 lg:pl-20 xl:pl-28 items-center ">
+            <div className="flex gap-4 md:gap-6 lg:gap-8 text-primary font-medium">
+              <button
+                onClick={() => scrollToSection("projects-section")}
+                className="hover:opacity-80 transition cursor-pointer"
+              >
+                Projects
+              </button>
+              <button
+                onClick={() => scrollToSection("purpose-section")}
+                className="hover:opacity-80 transition cursor-pointer"
+              >
+                Our Mission
+              </button>
+            </div>
+            <div className="flex items-center justify-evenly h-full lg:mx-5 xl:mx-[4.6rem] ">
+              <div
+                className={`flex items-center md:gap-4 lg:gap-6 ${
+                  scrolled ? "text-primary" : "text-white"
+                }`}
+              >
+                <Link
+                  href="https://github.com/EOTCOpenSource"
+                  className="hover:opacity-80 transition flex gap-1"
+                  title="github.com/EOTCOpenSource"
+                >
+                  <Users/> {gitMembers + " mem"}
+                </Link>
+                <Languages
+                  width={24}
+                  height={24}
+                  className="hover:opacity-80 transition cursor-pointer"
+                />
+                <Moon
+                  width={24}
+                  height={24}
+                  className="hover:opacity-80 transition cursor-pointer"
+                />
+              </div>
+            </div>
         </div>
 
-        <div className="hidden md:flex items-center lg:gap-24 md:gap-20 h-full">
-          <div className="flex gap-8 text-primary font-medium">
-            <button
-              onClick={() => scrollToSection("projects-section")}
-              className="hover:opacity-80 transition cursor-pointer"
+          <div className="w-[8rem] hidden md:flex md:w-[15%] lg:w-[12%] justify-end">
+            <Link
+              href="https://t.me/EOTCOpenSource"
+              className="bg-primary text-white mx-auto font-bold py-2 px-6 rounded-full transition-colors shadow-lg"
             >
-              Projects
-            </button>
-            <button
-              onClick={() => scrollToSection("purpose-section")}
-              className="hover:opacity-80 transition cursor-pointer"
-            >
-              Our Mission
-            </button>
+              Join us
+            </Link>
           </div>
-
-          <div className="flex items-center justify-center h-full mx-6">
-            <div
-              className={`flex items-center gap-6 ${
-                scrolled ? "text-primary" : "text-white"
-              }`}
-            >
-              <Link
-                href="https://github.com/EOTCOpenSource"
-                className="hover:opacity-80 transition flex gap-1"
-                title="github.com/EOTCOpenSource"
-              >
-                <Users/> {gitMembers + " mem"}
-              </Link>
-              <Languages
-                width={24}
-                height={24}
-                className="hover:opacity-80 transition cursor-pointer"
-              />
-              <Moon
-                width={24}
-                height={24}
-                className="hover:opacity-80 transition cursor-pointer"
-              />
-            </div>
-          </div>
-
-          <Link
-            href="https://t.me/EOTCOpenSource"
-            className="bg-primary text-white font-bold py-2 px-6 rounded-full transition-colors shadow-lg"
-          >
-            Join us
-          </Link>
         </div>
 
         <button

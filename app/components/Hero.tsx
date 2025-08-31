@@ -91,7 +91,7 @@ export default function Hero() {
                 alt="EOTC Church"
                 width={600}
                 height={600}
-                className="mx-auto -translate-x-8"
+                className="mx-auto md:-translate-x-[0%] lg:-translate-x-[9%] xl:-translate-x-[14%] 2xl:-translate-x-[19%]"
               />
             </div>
           </div>
@@ -99,18 +99,16 @@ export default function Hero() {
       </div>
 
       <div
-        className="absolute hidden md:block bg-primary z-0 mx-auto"
+        className="blob-bar absolute top-0 md:right-[16%] lg:right-[19%] xl:right-[22.3%] 2xl:right-[25%] hidden md:block bg-primary z-0 mx-auto"
         style={{
           width: "250px",
           height: "100vh",
-          top: "0",
-          right: "20%",
-          transform: "translate(0%,0%)",
+          // transform: "translate(0%,0%)",
         }}
       ></div>
 
       <div
-        className="hidden md:block absolute left-0 bottom-0 w-full h-14 pointer-events-none"
+        className="hidden md:block bg-red-500 absolute left-0 bottom-0 w-full h-14 pointer-events-none"
         style={{
           background:
             "linear-gradient(180deg, rgba(255, 255, 255, 0.2) 4.08%, #FFFFFF 14.95%)",
