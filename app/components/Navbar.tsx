@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Github, Group, Languages, Moon, Users } from "lucide-react";
+import { Github, GithubIcon, Group, Languages, Moon, Users } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -88,7 +88,7 @@ export default function Navbar() {
                   className="hover:opacity-80 transition flex gap-1"
                   title="github.com/EOTCOpenSource"
                 >
-                  <Users/> {gitMembers + " mem"}
+                  <GithubIcon/> {gitMembers + " mem"}
                 </Link>
                 <Languages
                   width={24}
@@ -159,7 +159,7 @@ export default function Navbar() {
             className="flex gap-1 text-primary font-medium py-2 px-4 rounded-lg hover:bg-gray-50 transition-colors"
             onClick={() => setIsOpen(false)}
           >
-            <Users/> {gitMembers + " members"}
+            <GithubIcon/> {gitMembers + " members"}
           </Link>
 
           <div className="flex items-center space-x-6 py-2 px-4">

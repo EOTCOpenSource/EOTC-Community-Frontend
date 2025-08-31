@@ -4,7 +4,7 @@ import { Fade } from "react-awesome-reveal";
 
 export default function Hero() {
   return (
-    <section className="relative w-full bg-gray-50 pt-28 min-h-full pb-24 overflow-hidden">
+    <section className="relative w-full bg-gray-50 pt-28 min-h-screen pb-24 overflow-hidden">
       <div
         className="absolute md:hidden w-[100px] left-1/2 transform -translate-x-1/2 top-0 bottom-0 z-0"
         style={{
@@ -51,14 +51,15 @@ export default function Hero() {
             </p>
             <Link
               href="https://t.me/EOTCOpenSource"
-              className="mt-8 bg-primary hover:bg-primary-800 text-white font-bold py-3 px-8 rounded-full transition-colors inline-block"
+              className="mt-8 bg-primary hover:bg-primary-600 text-white font-bold py-3 px-8 rounded-full transition-colors inline-block"
             >
-              Join our Telegram Community
+              Join us on Telegram
             </Link>
           </div>
         </div>
 
         <div className="hidden md:flex md:items-center md:justify-evenly">
+              <div className="absolute -top-32 -left-7 -z-12 w-[31.3rem] h-[31.3rem] rounded-full opacity-10 bg-red-600"></div>
           <div className="text-center md:text-left max-w-2xl space-y-6 md:mr-12 flex-1">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
               <Fade delay={200} duration={1000} cascade triggerOnce>
@@ -78,9 +79,9 @@ export default function Hero() {
 
             <Link
               href="https://t.me/EOTCOpenSource"
-              className="mt-8 bg-primary hover:bg-primary-600 text-white font-bold py-3 px-8 rounded-full transition-colors inline-block"
+              className="mt-8 bg-primary hover:bg-primary-600 text-white font-bold py-3 px-8 rounded-full transition-colors z-10 inline-block"
             >
-              Join Telegram 
+              Join Telegram
             </Link>
           </div>
 
@@ -91,7 +92,7 @@ export default function Hero() {
                 alt="EOTC Church"
                 width={600}
                 height={600}
-                className="mx-auto md:-translate-x-[0%] lg:-translate-x-[9%] xl:-translate-x-[14%] 2xl:-translate-x-[19%]"
+                className="mx-auto max-w-[28rem] md:-translate-x-[27%] lg:translate-x-[2%] xl:-translate-x-[14%] 2xl:-translate-x-[0%]"
               />
             </div>
           </div>
@@ -105,7 +106,15 @@ export default function Hero() {
           height: "100vh",
           // transform: "translate(0%,0%)",
         }}
-      ></div>
+      >
+        <span
+          style={{
+            borderRadius: "50% 50% 0 0",
+            boxShadow: "0px -5px 8px white",
+          }}
+          className="absolute left-0 bottom-0 w-full h-16 rounded-[1rem 1rem] bg-gray-100 block"
+        ></span>
+      </div>
 
       <div
         className="hidden md:block bg-red-500 absolute left-0 bottom-0 w-full h-14 pointer-events-none"
