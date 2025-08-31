@@ -107,7 +107,7 @@ export default function Navbar() {
           <div className="w-[8rem] hidden md:flex md:w-[15%] lg:w-[12%] justify-end">
             <Link
               href="https://t.me/EOTCOpenSource"
-              className="bg-primary text-white mx-auto font-bold py-2 px-6 rounded-full transition-colors shadow-lg"
+              className="bg-primary hover:bg-primary-600 text-white mx-auto font-bold py-2 px-6 rounded-full transition-colors shadow-lg"
             >
               Join us
             </Link>

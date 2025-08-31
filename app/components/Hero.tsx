@@ -51,7 +51,7 @@ export default function Hero() {
             </p>
             <Link
               href="https://t.me/EOTCOpenSource"
-              className="mt-8 bg-primary hover:bg-[#5a0d0d] text-white font-bold py-3 px-8 rounded-full transition-colors inline-block"
+              className="mt-8 bg-primary hover:bg-primary-800 text-white font-bold py-3 px-8 rounded-full transition-colors inline-block"
             >
               Join our Telegram Community
             </Link>
