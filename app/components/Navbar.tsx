@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Github, GithubIcon, Group, Languages, Moon, Users } from "lucide-react";
+import { GithubIcon, Languages, Moon } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,7 +51,7 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 ${
-        scrolled ? "backdrop-blur-md bg-[#ffffff25]  shadow-md" : ""
+        scrolled ? "backdrop-blur-md bg-[#ffffffe3]  shadow-md" : ""
       } left-0 right-0 w-full h-[80px] z-50`}
     >
       <div className=" mx-auto flex items-center justify-between h-full px-6 md:px-4 lg:px-12">

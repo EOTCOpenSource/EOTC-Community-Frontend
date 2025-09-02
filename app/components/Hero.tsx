@@ -92,7 +92,7 @@ export default function Hero() {
                 alt="EOTC Church"
                 width={600}
                 height={600}
-                className="mx-auto max-w-[28rem] md:-translate-x-[27%] lg:translate-x-[2%] xl:-translate-x-[14%] 2xl:-translate-x-[0%]"
+                className="mx-auto max-w-[28rem] md:-translate-x-[27%] lg:translate-x-[2%] xl:-translate-x-[14%] 2xl:-translate-x-[20%]"
               />
             </div>
           </div>
