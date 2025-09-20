@@ -59,27 +59,26 @@ export default function Hero() {
         </div>
 
         <div className="hidden md:flex md:items-center md:justify-evenly">
-              <div className="absolute -top-32 -left-7 -z-12 w-[31.3rem] h-[31.3rem] rounded-full opacity-10 bg-red-600"></div>
+<div className="absolute -top-20 -left-10 -z-12 w-[48.3rem] h-[48.3rem] rounded-full bg-[#72111108]"></div>
           <div className="text-center md:text-left max-w-2xl space-y-6 md:mr-12 flex-1">
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight mt-12">
               <Fade delay={200} duration={1000} cascade triggerOnce>
-                <span className="block text-gray-800">Faith Meets Code</span>
-                <span className="block text-primary">
+                <span className="block text-gray-800 pt-5">Faith Meets Code</span>
+                <span className="block text-primary mb-5">
                   Culture Meets Innovation
                 </span>
               </Fade>
             </h1>
 
             <Fade delay={940} duration={1000} cascade triggerOnce>
-              <p className="text-lg md:text-xl text-gray-600">
-                A collaborative community building open-source digital tools for
-                the Ethiopian Orthodox Tewahedo Church.
+              <p className="text-lg md:text-xl text-gray-600 py-5">
+                A collaborative community building open-source digital tools for the Ethiopian Orthodox Tewahedo Church, its followers, and its sacred traditions.
               </p>
             </Fade>
 
             <Link
               href="https://t.me/EOTCOpenSource"
-              className="mt-8 bg-primary hover:bg-primary-600 text-white font-bold py-3 px-8 rounded-full transition-colors z-10 inline-block"
+              className=" bg-primary hover:bg-primary-600 text-white font-bold py-5 px-16 my-10 rounded-full transition-colors inline-block"
             >
               Join Telegram
             </Link>
