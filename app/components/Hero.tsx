@@ -89,9 +89,9 @@ export default function Hero() {
               <Image
                 src="/EOTC_church.png"
                 alt="EOTC Church"
-                width={600}
-                height={600}
-                className="mx-auto max-w-[28rem] md:-translate-x-[27%] lg:translate-x-[2%] xl:-translate-x-[14%] 2xl:-translate-x-[20%]"
+                width= {700}
+                height={700}
+                className="mx-auto max-w-[36rem] md:-translate-x-[27%] lg:translate-x-[2%] xl:-translate-x-[14%] 2xl:-translate-x-[20%] pl-24"
               />
             </div>
           </div>
@@ -101,7 +101,7 @@ export default function Hero() {
       <div
         className="blob-bar absolute top-0 md:right-[16%] lg:right-[19%] xl:right-[22.3%] 2xl:right-[25%] hidden md:block bg-primary z-0 mx-auto"
         style={{
-          width: "250px",
+          width: "300px",
           height: "100vh",
           // transform: "translate(0%,0%)",
         }}
