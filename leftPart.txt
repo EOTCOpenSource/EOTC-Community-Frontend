@@ -3,8 +3,8 @@ the remaining part from this community part, anyone who wants to contribute here
 1. the alignment of the red frame in the Hero.tsx cmponent with the red frame in the Navebar.tsx 
 
 2. the circular shadow with low opacity in the Hero component 
-     - from the left side
+     - from the left side -- Done✅ 
 
-3. the white holes in the center of the red frame from CommunityIntro.tsx
+3. the white holes in the center of the red frame from CommunityIntro.tsx -- Done✅ 
 
 4. White and dark theme
