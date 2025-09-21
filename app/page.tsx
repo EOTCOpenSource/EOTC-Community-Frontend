@@ -15,7 +15,6 @@ export default function PuzzleGate() {
   const [position, setPosition] = useState({ x: 100, y: 260 });
   const [isDragging, setIsDragging] = useState(false);
   const offset = useRef({ x: 0, y: 0 });
-
   const pieceRef = useRef<HTMLImageElement>(null);
 
   const handleMouseDown = (e: React.MouseEvent<HTMLImageElement>) => {
@@ -37,7 +36,6 @@ export default function PuzzleGate() {
   const handleMouseUp = () => {
     setIsDragging(false);
 
-    // Check if piece is inside the drop area
     const dropArea = document.getElementById("drop-area");
     const piece = pieceRef.current;
     if (dropArea && piece) {
@@ -66,61 +64,76 @@ export default function PuzzleGate() {
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
     >
-      {!solved ?  (
-        <div className="flex items-center h-full flex-row-reverse w-full justify-between relative">
-          
-          <div className="h-[100%] m-auto mr-20 aspect-square relative">
-            <img
-              src={"/jigsaw-church.png"}
-              className="object-cover h-[100vh] w-full"
-              alt="Puzzle"
-            />
-            <div
-              id="drop-area"
-              className="w-[40%] h-[24%] border-4 absolute top-[33%] left-[58%] z-10 invisible"
-            >
-              to be dropped here
+      {/* ===== DESKTOP VERSION (Puzzle) ===== */}
+      <div className="hidden md:flex items-center h-full flex-row-reverse w-full justify-between relative">
+        {!solved ? (
+          <>
+            <div className="h-[100%] m-auto mr-20 aspect-square relative">
+              <img
+                src={"/jigsaw-church.png"}
+                className="object-cover h-[100vh] w-full"
+                alt="Puzzle"
+              />
+              <div
+                id="drop-area"
+                className="w-[40%] h-[24%] border-4 absolute top-[33%] left-[58%] z-10 invisible"
+              >
+                drop here
+              </div>
             </div>
-          </div>
 
-          <img
-            ref={pieceRef}
-            src="/jigsaw-piece.png"
-            alt="Puzzle piece"
-            onMouseDown={(e) => {
-              e.preventDefault();
-              handleMouseDown(e);
-            }}
-            className= "w-[41.4vmin] cursor-grab absolute drop-shadow-xl"
-            style={{
-              // width: 150,
-              left: position.x,
-              top: position.y,
-            }}
-          />
-        </div>
-      ) : (
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7 }}
-          className="text-center text-white"
-        >
-          <h1 className="text-3xl font-bold mb-4">
-            YOUR CONTRIBUTION MATTERS!
-          </h1>
-          <p className="text-lg text-gray-300 w-[57%] mx-auto">
-           በእናንተም ዘንድ ያሉ በልባቸው ጥበበኞች ሁሉ መጥተው እግዚአብሔር ያዘዘውን ያድርጉ። 
-          </p>
-          <span className="block mb-6">ዘጸ 35፡10</span>
-          <button
-            onClick={() => setShowHome(true)}
-            className="px-6 py-2 bg-gray-200 text-primary rounded-lg shadow-md hover:bg-gray-400"
+            <img
+              ref={pieceRef}
+              src="/jigsaw-piece.png"
+              alt="Puzzle piece"
+              onMouseDown={(e) => {
+                e.preventDefault();
+                handleMouseDown(e);
+              }}
+              className="w-[41.4vmin] cursor-grab absolute drop-shadow-xl"
+              style={{
+                left: position.x,
+                top: position.y,
+              }}
+            />
+          </>
+        ) : (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7 }}
+            className="text-center text-white mx-auto"
           >
-            Go to Home
-          </button>
-        </motion.div>
-      )}
+            <h1 className="text-3xl font-bold mb-4">
+              YOUR CONTRIBUTION MATTERS!
+            </h1>
+            <p className="text-lg text-gray-300 w-[57%] mx-auto mb-4">
+              በእናንተም ዘንድ ያሉ በልባቸው ጥበበኞች ሁሉ መጥተው እግዚአብሔር ያዘዘውን ያድርጉ።
+            </p>
+            <span className="block mb-6">ዘጸ 35፡10</span>
+            <button
+              onClick={() => setShowHome(true)}
+              className="px-6 py-2 bg-gray-200 text-primary rounded-lg shadow-md hover:bg-gray-400"
+            >
+              Go to Home
+            </button>
+          </motion.div>
+        )}
+      </div>
+
+      <div className="md:hidden text-center text-white px-6">
+        <h1 className="text-2xl font-bold mb-4">YOUR CONTRIBUTION MATTERS!</h1>
+        <p className="text-gray-300 mb-6">
+          በእናንተም ዘንድ ያሉ በልባቸው ጥበበኞች ሁሉ መጥተው እግዚአብሔር ያዘዘውን ያድርጉ።
+        </p>
+        <span className="block mb-6">ዘጸ 35፡10</span>
+        <button
+          onClick={() => setShowHome(true)}
+          className="px-6 py-2 bg-gray-200 text-primary rounded-lg shadow-md hover:bg-gray-400"
+        >
+          Go to Home
+        </button>
+      </div>
     </div>
   );
 }
