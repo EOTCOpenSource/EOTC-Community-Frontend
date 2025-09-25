@@ -8,3 +8,5 @@ the remaining part from this community part, anyone who wants to contribute here
 3. the white holes in the center of the red frame from CommunityIntro.tsx -- Done✅ 
 
 4. White and dark theme
+
+5. langauge select option -- inProgress
