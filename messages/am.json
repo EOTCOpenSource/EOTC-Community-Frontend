@@ -1,0 +1,54 @@
+{
+  "nav": {
+    "projects": "ፕሮጀክቶች",
+    "our mission": "ተልእኳችን",
+    "About": "ስለ እኛ",
+    "join us": "ከእኛ ጋር ተቀላቀሉ",
+    "Contact": "አድራሻ"
+  },
+  "hero": {
+    "Faith Meets Code": "እምነት ከኮድ ጋር ይገናኛል",
+    "Culture Meets Innovation": "ባህል ከአዲስ ሐሳብ ጋር ይገናኛል"
+  },
+  "communityintro": {
+    "channels": {
+      "Introduction": {
+        "name": "መግቢያ",
+        "description": "እዚህ ሰላም በሉ። ስምዎን እና የተቀላቀሉበትን ምክንያት ይንገሩን።"
+      },
+      "Project-ideas": {
+        "name": "ፕሮጀክት ሐሳቦች",
+        "description": "አዳዲስ የፕሮጀክት ሐሳቦችዎን እዚህ ይጋሩ።"
+      },
+      "Design or UI/UX": {
+        "name": "ንድፍ ወይም UI/UX",
+        "description": "ንድፎችን፣ አርማዎችን እና UI ንድፍ እዚህ ይጋሩ።"
+      },
+      "Help and Questions": {
+        "name": "እርዳታ እና ጥያቄዎች",
+        "description": "እርዳታ ከፈለጉ ጥያቄዎን እዚህ ይጠይቁ።"
+      },
+      "Announcements": {
+        "name": "ማስታወቂያዎች",
+        "description": "አስፈላጊ ዜናዎች ከአስተዳዳሪዎች።"
+      },
+      "Development": {
+        "name": "አበልፃጊነት",
+        "description": "ስለ ኮድና ኮምፒውተር እዚህ ይወያዩ።"
+      },
+      "Content and Writing": {
+        "name": "ይዘት እና ጽሑፍ",
+        "description": "በጽሑፍና ትርጉም ስራ ላይ እዚህ ይሠሩ።"
+      },
+      "Faith and Resources": {
+        "name": "እምነት እና ሀብቶች",
+        "description": "ስለ እምነታችን አገናኞችን እዚህ ይጋሩ።"
+      }
+    },
+    "We Excited": "ከእርስዎ ጋር ነገሮችን ለመገንባት በጣም እንደምንደሰት ደስ ይላል።",
+    "First please": "መጀመሪያ፣ እባኮትን ወደ ማስተዋወቂያ ርዕስ ሂዱ እና ሰላም በሉ!"
+  },
+  "footer": {},
+  "projects": {},
+  "purpose": {}
+}

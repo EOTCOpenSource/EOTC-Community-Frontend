@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { GithubIcon, Languages, Moon } from "lucide-react";
+import LanguageSwitcher from "./ui/ChangeLang";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -90,11 +91,7 @@ export default function Navbar() {
                 >
                   <GithubIcon/> {gitMembers + " mem"}
                 </Link>
-                <Languages
-                  width={24}
-                  height={24}
-                  className="hover:opacity-80 transition cursor-pointer"
-                />
+                <LanguageSwitcher/>
                 <Moon
                   width={24}
                   height={24}

@@ -1,0 +1,54 @@
+{
+  "nav": {
+    "projects": "Projects",
+    "our mission": "our mission",
+    "About": "About",
+    "join us": "Join us",
+    "Contact": "Contact"
+  },
+  "hero": {
+    "Faith Meets Code": "Faith Meets Code",
+    "Culture Meets Innovation": "Culture Meets Innovation"
+  },
+  "communityintro": {
+    "channels": {
+      "Introduction": {
+        "name": "Introduction",
+        "description": "Say hello here. Tell us your name and why you joined."
+      },
+      "Project-ideas": {
+        "name": "Project-ideas",
+        "description": "Share your new ideas for projects here."
+      },
+      "Design or UI/UX": {
+        "name": "Design or UI/UX",
+        "description": "Share designs and logos and UI design here."
+      },
+      "Help and Questions": {
+        "name": "Help and Questions",
+        "description": "If you need help, ask here."
+      },
+      "Announcements": {
+        "name": "Announcements",
+        "description": "Important news from the admins."
+      },
+      "Development": {
+        "name": "Development",
+        "description": "Talk about code and computers here."
+      },
+      "Content and Writing": {
+        "name": "Content and Writing",
+        "description": "For working on text and translation."
+      },
+      "Faith and Resources": {
+        "name": "Faith and Resources",
+        "description": "Share links about our faith here."
+      }
+    },
+    "We Excited": "We are excited to build things with you.",
+    "First please": "First, please go to the introductions topic and say hello!"
+  },
+  "footer": {},
+  "projects": {},
+  "purpose": {}
+}

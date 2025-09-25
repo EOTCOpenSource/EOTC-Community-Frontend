@@ -1,8 +1,12 @@
+"use client";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
+import { use } from "react";
 import { Fade } from "react-awesome-reveal";
 
 export default function Hero() {
+  const t = useTranslations("hero");
   return (
     <section className="relative w-full bg-gray-50 pt-28 min-h-screen pb-24 overflow-hidden">
       <div
@@ -24,7 +28,7 @@ export default function Hero() {
                 fraction={0.5}
                 triggerOnce
               >
-                <span className="block text-primary">Faith Meets Code</span>
+                <span className="block text-primary">{t("Faith Meets Code")}</span>
                 <span className="block text-primary">
                   Culture Meets Innovation
                 </span>

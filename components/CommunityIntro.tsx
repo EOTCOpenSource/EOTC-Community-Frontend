@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { Fade, Slide } from "react-awesome-reveal";
@@ -13,6 +14,7 @@ interface Channel {
 }
 
 export default function CommunityIntro() {
+  const t = useTranslations("communityintro");
   const channels: Channel[] = [
     {
       id: 1,
@@ -95,6 +97,7 @@ export default function CommunityIntro() {
         </div>
 
         <div className="relative mt-12 mb-20">
+          {/* {middle road like separator for desktop users only} */}
           <div
             className="absolute hidden md:flex flex-col items-center pt-14 gap-16 bg-primary w-[100px] overflow-hidden rounded-[10px]"
             style={{
@@ -112,28 +115,40 @@ export default function CommunityIntro() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-64 gap-y-12 relative z-10">
             <div className="space-y-12">
-              {channels.slice(0, 4).map((channel) => (
-                <Slide direction="left" triggerOnce key={channel.id}>
-                  <ChannelItem key={channel.id} channel={channel} />
-                </Slide>
-              ))}
+              {channels.map((channel, index) => {
+                if (channel.id % 2 == 0) {
+                  return null;
+                }
+
+                return (
+                  <Slide direction="left" triggerOnce key={channel.id}>
+                    <ChannelItem channel={channel} index={index} />
+                  </Slide>
+                );
+              })}
             </div>
 
             <div className="space-y-12 mt-12">
-              {channels.slice(4).map((channel) => (
-                <Slide direction="right" triggerOnce key={channel.id}>
-                  <ChannelItem key={channel.id} channel={channel} />
-                </Slide>
-              ))}
+              {channels.map((channel, index) => {
+                if (channel.id % 2 !== 0) {
+                  return null;
+                }
+
+                return (
+                  <Slide direction="right" triggerOnce key={channel.id}>
+                    <ChannelItem channel={channel} index={index} />
+                  </Slide>
+                );
+              })}
             </div>
           </div>
         </div>
 
         <div className="text-center mt-20">
           <p className="text-lg text-gray-700">
-            We are excited to build things with you.
+            {t("We Excited")}
             <br />
-            First, please go to the introductions topic and say hello!
+            {t("First please")}
           </p>
         </div>
       </div>
@@ -141,7 +156,8 @@ export default function CommunityIntro() {
   );
 }
 
-function ChannelItem({ channel }: { channel: Channel }) {
+function ChannelItem({ channel, index }: { channel: Channel; index: number }) {
+  const t = useTranslations("communityintro.channels");
   return (
     <div className="flex items-start space-x-6">
       <div className="flex-shrink-0 mt-0">
@@ -161,10 +177,16 @@ function ChannelItem({ channel }: { channel: Channel }) {
             rel="noopener noreferrer"
             className="hover:underline"
           >
-            {channel.id}. {channel.name}
+            <span className="md:hidden inline">{index + 1}</span>
+            <span className="md:inline hidden">{channel.id}</span>
+             .
+            {" "}
+            {t(`${channel.name}.name`)}
           </Link>
         </h3>
-        <p className="text-gray-600 mt-0.5">{channel.description}</p>
+        <p className="text-gray-600 mt-0.5">
+          {t(`${channel.name}.description`)}
+        </p>
       </div>
     </div>
   );
