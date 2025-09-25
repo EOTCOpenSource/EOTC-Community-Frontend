@@ -8,7 +8,7 @@ import { Fade } from "react-awesome-reveal";
 export default function Hero() {
   const t = useTranslations("hero");
   return (
-    <section className="relative w-full bg-gray-50 pt-28 min-h-screen pb-24 overflow-hidden">
+    <section className="relative w-full bg-gray-50 pt-24 min-h-screen pb-16 overflow-hidden flex flex-col justify-center">
       <div
         className="absolute md:hidden w-[100px] left-1/2 transform -translate-x-1/2 top-0 bottom-0 z-0"
         style={{
@@ -17,7 +17,7 @@ export default function Hero() {
         }}
       ></div>
 
-      <div className="relative z-10 container mx-auto px-6 md:px-12">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="md:hidden flex flex-col items-center">
           <div className="text-center max-w-2xl space-y-6">
             <h1 className="text-4xl font-bold leading-tight">
@@ -28,7 +28,9 @@ export default function Hero() {
                 fraction={0.5}
                 triggerOnce
               >
-                <span className="block text-primary">{t("Faith Meets Code")}</span>
+                <span className="block text-primary">
+                  {t("Faith Meets Code")}
+                </span>
                 <span className="block text-primary">
                   Culture Meets Innovation
                 </span>
@@ -62,12 +64,14 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="hidden md:flex md:items-center md:justify-evenly">
-<div className="absolute -top-20 -left-10 -z-12 w-[48.3rem] h-[48.3rem] rounded-full bg-[#72111108]"></div>
-          <div className="text-center md:text-left max-w-2xl space-y-6 md:mr-12 flex-1">
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight mt-12">
+        <div className="hidden md:grid md:grid-cols-2 md:gap-8 items-center">
+          <div className="absolute pointer-events-none -left-10 top-1/2 -translate-y-1/2 -z-12 w-[70vw] h-[70vw] md:w-[40vw] md:h-[40vw] rounded-full bg-[#72111108]" />
+          <div className="text-center md:text-left max-w-xl space-y-6 md:mr-8 flex-1">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mt-8">
               <Fade delay={200} duration={1000} cascade triggerOnce>
-                <span className="block text-gray-800 pt-5">Faith Meets Code</span>
+                <span className="block text-gray-800 pt-5">
+                  Faith Meets Code
+                </span>
                 <span className="block text-primary mb-5">
                   Culture Meets Innovation
                 </span>
@@ -75,39 +79,43 @@ export default function Hero() {
             </h1>
 
             <Fade delay={940} duration={1000} cascade triggerOnce>
-              <p className="text-lg md:text-xl text-gray-600 py-5">
-                A collaborative community building open-source digital tools for the Ethiopian Orthodox Tewahedo Church, its followers, and its sacred traditions.
+              <p className="text-base sm:text-lg md:text-xl text-gray-600 py-4">
+                A collaborative community building open-source digital tools for
+                the Ethiopian Orthodox Tewahedo Church, its followers, and its
+                sacred traditions.
               </p>
             </Fade>
 
             <Link
               href="https://t.me/EOTCOpenSource"
-              className=" bg-primary hover:bg-primary-600 text-white font-bold py-5 px-16 my-10 rounded-full transition-colors inline-block"
+              className="bg-primary hover:bg-primary-600 text-white font-bold py-4 px-10 my-8 rounded-full transition-colors inline-block"
             >
               Join Telegram
             </Link>
           </div>
 
-          <div className="hidden md:block relative flex-1 justify-center items-center mb-8 md:mb-0">
-            <div className="relative z-10">
-              <Image
-                src="/EOTC_church.png"
-                alt="EOTC Church"
-                width= {700}
-                height={700}
-                className="mx-auto max-w-[36rem] md:-translate-x-[27%] lg:translate-x-[2%] xl:-translate-x-[14%] 2xl:-translate-x-[20%] pl-24"
-              />
+          <div className="hidden md:flex flex-1 justify-center items-center mb-8 md:mb-0">
+            <div className="relative w-full flex flex-col items-center justify-center">
+              <div className="relative z-20 flex justify-center items-end w-full">
+                <Image
+                  src="/EOTC_church.png"
+                  alt="EOTC Church"
+                  width={400}
+                  height={400}
+                  className="mx-auto w-full max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl"
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
 
+      {/* Decorative blob bar, responsive position */}
       <div
-        className="blob-bar absolute top-0 md:right-[16%] lg:right-[19%] xl:right-[22.3%] 2xl:right-[25%] hidden md:block bg-primary z-0 mx-auto"
+        className="blob-bar absolute top-0 right-56 hidden md:block bg-primary z-0 mx-auto"
         style={{
-          width: "300px",
+          width: "16vw",
           height: "100vh",
-          // transform: "translate(0%,0%)",
         }}
       >
         <span
