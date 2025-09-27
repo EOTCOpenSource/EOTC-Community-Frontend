@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
-import "../globals.css";
+import "./globals.css";
 
-import { NextIntlClientProvider } from "next-intl";
-import { notFound } from "next/navigation";
-import { getLocale } from "next-intl/server";
+import { getLocale } from "next-intl/server";       
+import { NextIntlClientProvider } from "next-intl"; 
 
 const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -21,19 +20,18 @@ export const metadata: Metadata = {
   },
 };
 
-// NOTE: This should live inside `app/[locale]/layout.tsx`
-export default async function LocaleLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-  params: { locale: string };
-}>) {
+}) {
   const locale = await getLocale();
+  const messages = (await import(`../messages/${locale}.json`)).default;
 
   return (
     <html lang={locale} className={jetBrainsMono.variable}>
       <body>
-        <NextIntlClientProvider>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>
       </body>

@@ -11,15 +11,11 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 const LanguageSwitcher = () => {
-  const router = useRouter();
-  const pathname = usePathname();
   const locale = useLocale();
 
   const changeLanguage = (newLocale: string) => {
-    if (!pathname) return;
-    const segments = pathname.split("/");
-    segments[1] = newLocale; // assumes routes are like /en/... or /am/...
-    router.push(segments.join("/"));
+    document.cookie = `NEXT_LOCALE=${newLocale}; path=/`;
+    window.location.reload();
   };
 
   return (
