@@ -1,14 +1,16 @@
 "use client";
+
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-import { use } from "react";
 import { Fade } from "react-awesome-reveal";
 
 export default function Hero() {
   const t = useTranslations("hero");
+
   return (
     <section className="relative w-full bg-gray-50 pt-24 min-h-screen pb-16 overflow-hidden flex flex-col justify-center">
+      {/* Mobile background blob */}
       <div
         className="absolute md:hidden w-[100px] left-1/2 transform -translate-x-1/2 top-0 bottom-0 z-0"
         style={{
@@ -18,6 +20,7 @@ export default function Hero() {
       ></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        {/* Mobile */}
         <div className="md:hidden flex flex-col items-center">
           <div className="text-center max-w-2xl space-y-6">
             <h1 className="text-4xl font-bold leading-tight">
@@ -28,12 +31,8 @@ export default function Hero() {
                 fraction={0.5}
                 triggerOnce
               >
-                <span className="block text-primary">
-                  {t("Faith Meets Code")}
-                </span>
-                <span className="block text-primary">
-                  Culture Meets Innovation
-                </span>
+                <span className="block text-primary">{t("Faith Meets Code")}</span>
+                <span className="block text-primary">{t("Culture Meets Innovation")}</span>
               </Fade>
             </h1>
           </div>
@@ -52,37 +51,31 @@ export default function Hero() {
 
           <div className="text-center max-w-2xl">
             <p className="text-lg text-[#000000] mb-6">
-              A collaborative community building open-source digital tools for
-              the Ethiopian Orthodox Tewahedo Church.
+              {t("mobileDescription")}
             </p>
             <Link
               href="https://t.me/EOTCOpenSource"
               className="mt-8 bg-primary hover:bg-primary-600 text-white font-bold py-3 px-8 rounded-full transition-colors inline-block"
             >
-              Join us on Telegram
+              {t("joinButton")}
             </Link>
           </div>
         </div>
 
+        {/* Desktop */}
         <div className="hidden md:grid md:grid-cols-2 md:gap-8 items-center">
           <div className="absolute pointer-events-none -left-10 top-1/2 -translate-y-1/2 -z-12 w-[70vw] h-[70vw] md:w-[40vw] md:h-[40vw] rounded-full bg-[#72111108]" />
           <div className="text-center md:text-left max-w-xl space-y-6 md:mr-8 flex-1">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mt-8">
               <Fade delay={200} duration={1000} cascade triggerOnce>
-                <span className="block text-gray-800 pt-5">
-                  Faith Meets Code
-                </span>
-                <span className="block text-primary mb-5">
-                  Culture Meets Innovation
-                </span>
+                <span className="block text-gray-800 pt-5">{t("Faith Meets Code")}</span>
+                <span className="block text-primary mb-5">{t("Culture Meets Innovation")}</span>
               </Fade>
             </h1>
 
             <Fade delay={940} duration={1000} cascade triggerOnce>
               <p className="text-base sm:text-lg md:text-xl text-gray-600 py-4">
-                A collaborative community building open-source digital tools for
-                the Ethiopian Orthodox Tewahedo Church, its followers, and its
-                sacred traditions.
+                {t("desktopDescription")}
               </p>
             </Fade>
 
@@ -90,7 +83,7 @@ export default function Hero() {
               href="https://t.me/EOTCOpenSource"
               className="bg-primary hover:bg-primary-600 text-white font-bold py-4 px-10 my-8 rounded-full transition-colors inline-block"
             >
-              Join Telegram
+              {t("joinButtonDesktop")}
             </Link>
           </div>
 
@@ -110,18 +103,15 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Decorative blob bar, responsive position */}
+      {/* Decorative blob bar */}
       <div
         className="blob-bar absolute top-0 right-56 hidden md:block bg-primary z-0 mx-auto"
-        style={{
-          width: "16vw",
-          height: "100vh",
-        }}
+        style={{ width: "16vw", height: "100vh" }}
       >
         <span
           style={{
             borderRadius: "50% 50% 0 0",
-            boxShadow: "0px -5px 8px white",
+            boxShadow: "0px -5px 8px white"
           }}
           className="absolute left-0 bottom-0 w-full h-16 rounded-[1rem 1rem] bg-gray-100 block"
         ></span>
@@ -131,7 +121,7 @@ export default function Hero() {
         className="hidden md:block bg-red-500 absolute left-0 bottom-0 w-full h-14 pointer-events-none"
         style={{
           background:
-            "linear-gradient(180deg, rgba(255, 255, 255, 0.2) 4.08%, #FFFFFF 14.95%)",
+            "linear-gradient(180deg, rgba(255, 255, 255, 0.2) 4.08%, #FFFFFF 14.95%)"
         }}
       />
     </section>

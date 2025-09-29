@@ -1,14 +1,17 @@
 {
   "nav": {
     "projects": "Projects",
-    "our mission": "our mission",
-    "About": "About",
-    "join us": "Join us",
-    "Contact": "Contact"
+    "mission": "Our Mission",
+    "join": "Join us",
+    "members": "{count} members"
   },
   "hero": {
     "Faith Meets Code": "Faith Meets Code",
-    "Culture Meets Innovation": "Culture Meets Innovation"
+    "Culture Meets Innovation": "Culture Meets Innovation",
+    "mobileDescription": "A collaborative community building open-source digital tools for the Ethiopian Orthodox Tewahedo Church.",
+    "desktopDescription": "A collaborative community building open-source digital tools for the Ethiopian Orthodox Tewahedo Church, its followers, and its sacred traditions.",
+    "joinButton": "Join us on Telegram",
+    "joinButtonDesktop": "Join Telegram"
   },
   "communityintro": {
     "channels": {
@@ -48,7 +51,55 @@
     "We Excited": "We are excited to build things with you.",
     "First please": "First, please go to the introductions topic and say hello!"
   },
-  "footer": {},
-  "projects": {},
-  "purpose": {}
+  "projects": {
+  "ourProjects": "OUR PROJECTS",
+  "description": "Here's what we're building right now. Your help is needed!",
+  "filters": {
+    "allProjects": "All Projects",
+    "active": "Active",
+    "completed": "Completed",
+    "pending": "Pending",
+    "allTypes": "All Types",
+    "website": "Website",
+    "application": "Application"
+  },
+  "viewAll": "VIEW ALL PROJECTS",
+  "status": {
+    "active": "Active",
+    "completed": "Completed",
+    "pending": "Pending"
+  },
+  "type": {
+    "website": "Website",
+    "application": "Application",
+    "other": "Other"
+  },
+  "viewLive": "View Live Project →"
+}
+,
+
+  "purpose": {
+    "heading": "Our Purpose",
+    "subheading": "Serving the Church through technology, together.",
+    "missionTitle": "Our Mission",
+    "missionDescription": "To build open-source digital tools that support the Church, its followers, and its sacred traditions.",
+    "goalTitle": "Our Goal",
+    "goalDescription": "To empower our community by making spiritual and cultural resources more accessible for generations to come.",
+    "joinTitle": "Why Join Us",
+    "joinDescription": "Make your faith with your skills.\nCollaborate with like-minded individuals to create a lasting digital legacy."
+  }
+,
+  "footer": {
+    "logoAlt": "EOTC Logo",
+    "brand": "EOTC OpenSource",
+    "terms": "Terms and Services",
+    "home": "Home",
+    "about": "About",
+    "community": "Community",
+    "join": "Join Us",
+    "rights": "All rights reserved."
+  }
+
+
+
 }

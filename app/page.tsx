@@ -1,6 +1,7 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
+import { useLocale, useMessages } from "next-intl";
 import { motion } from "framer-motion";
 
 import Navbar from "../components/Navbar";
@@ -11,8 +12,26 @@ import Purpose from "../components/Purpose";
 import Projects from "../components/Projects";
 
 export default function HomePage() {
+  const locale = useLocale();
+  const messages = useMessages();
   const [solved, setSolved] = useState(false);
   const [showHome, setShowHome] = useState(false);
+
+  // On mount, check localStorage for first visit
+  useEffect(() => {
+    const hasVisited = localStorage.getItem("hasVisited");
+    if (hasVisited === "true") {
+      setSolved(true);
+      setShowHome(true);
+    }
+  }, []);
+
+  // When puzzle is solved or home is shown, set hasVisited
+  useEffect(() => {
+    if (solved || showHome) {
+      localStorage.setItem("hasVisited", "true");
+    }
+  }, [solved, showHome]);
 
   const [position, setPosition] = useState({ x: 100, y: 260 });
   const [isDragging, setIsDragging] = useState(false);
@@ -59,6 +78,7 @@ export default function HomePage() {
   if (showHome || solved) {
     return (
       <>
+        {/* Pass locale/messages as props if needed, or use them in your components */}
         <Navbar />
         <Hero />
         <CommunityIntro />
@@ -77,6 +97,7 @@ export default function HomePage() {
       onMouseLeave={handleMouseUp}
     >
       {/* ===== DESKTOP VERSION ===== */}
+      {/*
       <div className="hidden md:flex items-center h-full flex-row-reverse w-full justify-between relative">
         <div className="h-[100%] m-auto mr-20 aspect-square relative">
           <img
@@ -105,6 +126,7 @@ export default function HomePage() {
           }}
         />
       </div>
+      */}
 
       {/* ===== MOBILE VERSION ===== */}
       <div className="md:hidden text-center text-white px-6">

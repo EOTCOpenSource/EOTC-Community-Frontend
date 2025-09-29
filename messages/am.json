@@ -1,14 +1,17 @@
 {
   "nav": {
     "projects": "ፕሮጀክቶች",
-    "our mission": "ተልእኳችን",
-    "About": "ስለ እኛ",
-    "join us": "ከእኛ ጋር ተቀላቀሉ",
-    "Contact": "አድራሻ"
+    "mission": "የእኛ ተልዕኮ",
+    "join": "አባል ይሁኑ",
+    "members": "{count} አባላት"
   },
   "hero": {
     "Faith Meets Code": "እምነት ከኮድ ጋር ይገናኛል",
-    "Culture Meets Innovation": "ባህል ከአዲስ ሐሳብ ጋር ይገናኛል"
+    "Culture Meets Innovation": "ባህል ከአዲስ ሐሳብ ጋር ይገናኛል",
+    "mobileDescription": "የኢትዮጵያ ኦርቶዶክስ ተዋህዶ ቤተክርስቲያንን የሚያገለግሉ ክፍት ምንጭ ዲጂታል መሳሪያዎችን በመገንባት የሚሠሩ የመተባበሪያ ማህበር።",
+    "desktopDescription": "ለኢትዮጵያ ኦርቶዶክስ ተዋህዶ ቤተክርስቲያን፣ ለተከታዮችና ለቅዱሳን ባህሎች ክፍት ምንጭ ዲጂታል መሳሪያዎችን የሚገነቡ የመተባበሪያ ማህበር።",
+    "joinButton": "በቴሌግራም ይቀላቀሉ",
+    "joinButtonDesktop": "በቴሌግራም ይቀላቀሉ"
   },
   "communityintro": {
     "channels": {
@@ -48,7 +51,54 @@
     "We Excited": "ከእርስዎ ጋር ነገሮችን ለመገንባት በጣም እንደምንደሰት ደስ ይላል።",
     "First please": "መጀመሪያ፣ እባኮትን ወደ ማስተዋወቂያ ርዕስ ሂዱ እና ሰላም በሉ!"
   },
-  "footer": {},
-  "projects": {},
-  "purpose": {}
+  
+  "projects": {
+  "ourProjects": "የእኛ ፕሮጀክቶች",
+  "description": "እነዚህ አሁን እንሠራለን። የእርስዎ እርዳታ ያስፈልጋል!",
+  "filters": {
+    "allProjects": "ሁሉም ፕሮጀክቶች",
+    "active": "ንቁ",
+    "completed": "ተጠናቀቀ",
+    "pending": "በሂደት ላይ",
+    "allTypes": "ሁሉም አይነቶች",
+    "website": "ድህረገጽ",
+    "application": "መተግበሪያ"
+  },
+  "viewAll": "ሁሉንም ፕሮጀክቶች ይመልከቱ",
+  "status": {
+    "active": "ንቁ",
+    "completed": "ተጠናቀቀ",
+    "pending": "በሂደት ላይ"
+  },
+  "type": {
+    "website": "ድህረገጽ",
+    "application": "መተግበሪያ",
+    "other": "ሌላ"
+  },
+  "viewLive": "በቀጥታ ይመልከቱ →"
+}
+,
+  "purpose": {
+    "heading": "የእኛ ዓላማ",
+    "subheading": "ቤተክርስቲያንን በቴክኖሎጂ በአንድነት ማዳበር።",
+    "missionTitle": "የእኛ ተልዕኮ",
+    "missionDescription": "ቤተክርስቲያንን፣ ከተከታዮቻችን ጋር፣ እና ቅዱሳን ባህሎችን የሚደግፉ ክፍት ምንጭ ዲጂታል መሳሪያዎችን ለመገንባት እንሠራለን።",
+    "goalTitle": "የእኛ ግቦች",
+    "goalDescription": "መንፈሳዊና ባህላዊ ሀብቶችን ለሚቀጥሉ ትውልዶች በቀላሉ እንዲያገኙ ማብቂያ እንሰጣለን።",
+    "joinTitle": "ለምን ከእኛ ጋር ተቀላቀሉ?",
+    "joinDescription": "እምነትዎን ከክህሎቶችዎ ጋር ያድርጉ።\nከተመሳሳይ ሐሳብ ያላቸው ጋር ተቀላቀሉ እና ቆይታ የሚቆይ ዲጂታል ተልዕኮ ፍጠሩ።"
+  }
+,
+  "footer": {
+    "logoAlt": "የኢትዮጵያ ኦርቶዶክስ ቤተክርስቲያን ሎጎ",
+    "brand": "የኢ/ኦ/ተ/ቤ/ክ ክፍት ምንጭ",
+    "terms": "የአገልግሎት ደንቦች",
+    "home": "ዋና ገጽ",
+    "about": "ስለ እኛ",
+    "community": "ማህበረሰብ",
+    "join": "አባል ይሁኑ",
+    "rights": "ሁሉም መብቶች የተጠበቁ ናቸው"
+  }
+
+
 }

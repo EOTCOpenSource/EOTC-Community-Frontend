@@ -1,21 +1,35 @@
 "use client";
 
-import { usePathname, useRouter } from "next/navigation";
+import * as React from "react";
 import { useLocale } from "next-intl";
 import { LanguagesIcon } from "lucide-react";
 import {
   DropdownMenu,
+  DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "./dropdown-menu";
 
-const LanguageSwitcher = () => {
-  const locale = useLocale();
+export default function ChangeLang() {
+  const currentLocale = useLocale();
+  const [locale, setLocale] = React.useState(currentLocale);
 
-  const changeLanguage = (newLocale: string) => {
-    document.cookie = `NEXT_LOCALE=${newLocale}; path=/`;
-    window.location.reload();
+  // Client-side language switching
+  const switchLocale = async (newLocale: string) => {
+    if (newLocale === locale) return;
+
+    // Dynamically import new messages
+    const messages = (await import(`../../messages/${newLocale}.json`)).default;
+
+    // Dispatch event to update RootLayoutClient
+    window.dispatchEvent(
+      new CustomEvent("next-intl-messages", {
+        detail: { locale: newLocale, messages },
+      })
+    );
+
+    setLocale(newLocale);
+    document.cookie = `NEXT_LOCALE=${newLocale}; path=/`; // optional: persist
   };
 
   return (
@@ -26,18 +40,15 @@ const LanguageSwitcher = () => {
           height={24}
           className="hover:opacity-80 transition cursor-pointer"
         />
-        {/* <span className="sr-only">Change language</span> */}
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => changeLanguage("en")}>
+        <DropdownMenuItem onClick={() => switchLocale("en")}>
           {locale === "en" ? "✓ " : ""} English
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => changeLanguage("am")}>
+        <DropdownMenuItem onClick={() => switchLocale("am")}>
           {locale === "am" ? "✓ " : ""} አማርኛ
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
-};
-
-export default LanguageSwitcher;
+}
