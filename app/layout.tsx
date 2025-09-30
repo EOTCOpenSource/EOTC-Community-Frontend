@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import RootLayoutClient from "./RootLayoutClient";
 
 import { getLocale } from "next-intl/server";       
-import { NextIntlClientProvider } from "next-intl"; 
 
 const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -31,9 +31,9 @@ export default async function RootLayout({
   return (
     <html lang={locale} className={jetBrainsMono.variable}>
       <body>
-        <NextIntlClientProvider locale={locale} messages={messages}>
+        <RootLayoutClient initialLocale={locale} initialMessages={messages}>
           {children}
-        </NextIntlClientProvider>
+        </RootLayoutClient>
       </body>
     </html>
   );

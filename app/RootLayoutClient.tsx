@@ -1,32 +1,37 @@
 "use client";
 
+import * as React from "react";
 import { NextIntlClientProvider } from "next-intl";
-import { useLocale, useMessages } from "next-intl";
-import { useEffect, useState } from "react";
 
 export default function RootLayoutClient({
   children,
+  initialLocale,
+  initialMessages,
 }: {
   children: React.ReactNode;
+  initialLocale: string;
+  initialMessages: Record<string, string>;
 }) {
-  const initialLocale = useLocale();
-  const initialMessages = useMessages();
-  const [locale, setLocale] = useState(initialLocale);
-  const [messages, setMessages] = useState(initialMessages);
+  const [locale, setLocale] = React.useState(initialLocale);
+  const [messages, setMessages] = React.useState(initialMessages);
 
-  useEffect(() => {
-    const handler = (event: CustomEvent) => {
-      if (event.detail?.locale && event.detail?.messages) {
-        setLocale(event.detail.locale);
-        setMessages(event.detail.messages);
+  React.useEffect(() => {
+    const handleLocaleChange = (event: CustomEvent) => {
+      const { locale: newLocale, messages: newMessages } = event.detail;
+      if (newLocale && newMessages) {
+        setLocale(newLocale);
+        setMessages(newMessages);
+        
+        document.documentElement.lang = newLocale;
       }
     };
-    window.addEventListener("next-intl-messages", handler as EventListener);
+
+    const eventHandler = (e: Event) => handleLocaleChange(e as CustomEvent);
+    
+    window.addEventListener("next-intl-messages", eventHandler);
+
     return () => {
-      window.removeEventListener(
-        "next-intl-messages",
-        handler as EventListener
-      );
+      window.removeEventListener("next-intl-messages", eventHandler);
     };
   }, []);
 

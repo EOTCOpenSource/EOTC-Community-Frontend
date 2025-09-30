@@ -14,22 +14,29 @@ export default function ChangeLang() {
   const currentLocale = useLocale();
   const [locale, setLocale] = React.useState(currentLocale);
 
-  // Client-side language switching
+  React.useEffect(() => {
+    setLocale(currentLocale);
+  }, [currentLocale]);
+
   const switchLocale = async (newLocale: string) => {
     if (newLocale === locale) return;
 
-    // Dynamically import new messages
-    const messages = (await import(`../../messages/${newLocale}.json`)).default;
+    try {
+      const messages = (await import(`../../messages/${newLocale}.json`)).default;
 
-    // Dispatch event to update RootLayoutClient
-    window.dispatchEvent(
-      new CustomEvent("next-intl-messages", {
-        detail: { locale: newLocale, messages },
-      })
-    );
+      setLocale(newLocale);
 
-    setLocale(newLocale);
-    document.cookie = `NEXT_LOCALE=${newLocale}; path=/`; // optional: persist
+      window.dispatchEvent(
+        new CustomEvent("next-intl-messages", {
+          detail: { locale: newLocale, messages },
+        })
+      );
+
+      document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000; SameSite=Lax`;
+      
+    } catch (error) {
+      console.error("Error loading locale messages:", error);
+    }
   };
 
   return (
