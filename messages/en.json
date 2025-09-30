@@ -13,44 +13,51 @@
     "joinButton": "Join us on Telegram",
     "joinButtonDesktop": "Join Telegram"
   },
+  
   "communityintro": {
+    "title": "Welcome to the EOTC OpenSource Telegram Community!",
+    "subtitle": "Our goal is to make free tools, like apps and websites, to help the Church and its members.",
     "channels": {
       "Introduction": {
         "name": "Introduction",
         "description": "Say hello here. Tell us your name and why you joined."
       },
-      "Project-ideas": {
-        "name": "Project-ideas",
-        "description": "Share your new ideas for projects here."
-      },
-      "Design or UI/UX": {
-        "name": "Design or UI/UX",
-        "description": "Share designs and logos and UI design here."
-      },
-      "Help and Questions": {
-        "name": "Help and Questions",
-        "description": "If you need help, ask here."
-      },
       "Announcements": {
         "name": "Announcements",
         "description": "Important news from the admins."
+      },
+      "Project-ideas": {
+        "name": "Project Ideas",
+        "description": "Share your new ideas for projects here."
       },
       "Development": {
         "name": "Development",
         "description": "Talk about code and computers here."
       },
-      "Content and Writing": {
-        "name": "Content and Writing",
-        "description": "For working on text and translation."
+      "Design": {
+        "name": "Design & UI/UX",
+        "description": "Share designs, logos, and UI layouts here."
       },
-      "Faith and Resources": {
-        "name": "Faith and Resources",
-        "description": "Share links about our faith here."
+      "Content": {
+        "name": "Content & Writing",
+        "description": "Work on text, translation, and content writing here."
+      },
+      "Help": {
+        "name": "Help & Questions",
+        "description": "If you need help, ask here."
+      },
+      "Resources": {
+        "name": "Faith & Resources",
+        "description": "Share links, books, and spiritual resources here."
       }
     },
-    "We Excited": "We are excited to build things with you.",
-    "First please": "First, please go to the introductions topic and say hello!"
+    "outro": {
+      "line1": "We are excited to have you in our community!",
+      "line2": "First, please introduce yourself in the Introduction channel."
+    }
   },
+  
+
   "projects": {
   "ourProjects": "OUR PROJECTS",
   "description": "Here's what we're building right now. Your help is needed!",

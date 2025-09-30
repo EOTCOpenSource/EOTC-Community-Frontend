@@ -13,44 +13,51 @@
     "joinButton": "በቴሌግራም ይቀላቀሉ",
     "joinButtonDesktop": "በቴሌግራም ይቀላቀሉ"
   },
+ 
   "communityintro": {
+    "title": "እንኳን ወደ የኢ.ኦ.ተ.ቤተክርስቲያን ኦፕን ሶርስ ቴሌግራም ማህበር በደህና መጡ!",
+    "subtitle": "ዓላማችን ቤተክርስቲያኑንና አባላቱን ለማገልገል ነፃ መሳሪያዎች እንደ መተግበሪያና ድር ጣቢያዎች ማዘጋጀት ነው።",
     "channels": {
       "Introduction": {
         "name": "መግቢያ",
-        "description": "እዚህ ሰላም በሉ። ስምዎን እና የተቀላቀሉበትን ምክንያት ይንገሩን።"
-      },
-      "Project-ideas": {
-        "name": "ፕሮጀክት ሐሳቦች",
-        "description": "አዳዲስ የፕሮጀክት ሐሳቦችዎን እዚህ ይጋሩ።"
-      },
-      "Design or UI/UX": {
-        "name": "ንድፍ ወይም UI/UX",
-        "description": "ንድፎችን፣ አርማዎችን እና UI ንድፍ እዚህ ይጋሩ።"
-      },
-      "Help and Questions": {
-        "name": "እርዳታ እና ጥያቄዎች",
-        "description": "እርዳታ ከፈለጉ ጥያቄዎን እዚህ ይጠይቁ።"
+        "description": "እዚህ ላይ ሰላም በሉ። ስምዎን እና ለምን ተቀላቀሉ ይንገሩን።"
       },
       "Announcements": {
         "name": "ማስታወቂያዎች",
-        "description": "አስፈላጊ ዜናዎች ከአስተዳዳሪዎች።"
+        "description": "ከአስተዳደሩ የሚመጡ አስፈላጊ ዜናዎች።"
+      },
+      "Project-ideas": {
+        "name": "የፕሮጀክት አሳብ",
+        "description": "አዲስ የፕሮጀክት አሳብዎትን እዚህ ያጋሩ።"
       },
       "Development": {
-        "name": "አበልፃጊነት",
-        "description": "ስለ ኮድና ኮምፒውተር እዚህ ይወያዩ።"
+        "name": "ልማት",
+        "description": "ስለ ኮድና ኮምፒውተር ይወያዩ።"
       },
-      "Content and Writing": {
-        "name": "ይዘት እና ጽሑፍ",
-        "description": "በጽሑፍና ትርጉም ስራ ላይ እዚህ ይሠሩ።"
+      "Design": {
+        "name": "ዲዛይን & UI/UX",
+        "description": "ዲዛይን፣ አርማዎችና UI እቅዶችን እዚህ ያጋሩ።"
       },
-      "Faith and Resources": {
-        "name": "እምነት እና ሀብቶች",
-        "description": "ስለ እምነታችን አገናኞችን እዚህ ይጋሩ።"
+      "Content": {
+        "name": "ይዘት & ጽሑፍ",
+        "description": "ጽሑፍ፣ ትርጉምና ይዘት አዘጋጅት እዚህ ያድርጉ።"
+      },
+      "Help": {
+        "name": "እገዛ & ጥያቄዎች",
+        "description": "እገዛ ካስፈለገዎት ጥያቄዎትን እዚህ ይጠይቁ።"
+      },
+      "Resources": {
+        "name": "እምነት & ሀብት",
+        "description": "ሊንኮች፣ መፅሀፍትና መንፈሳዊ ሀብቶችን እዚህ ያጋሩ።"
       }
     },
-    "We Excited": "ከእርስዎ ጋር ነገሮችን ለመገንባት በጣም እንደምንደሰት ደስ ይላል።",
-    "First please": "መጀመሪያ፣ እባኮትን ወደ ማስተዋወቂያ ርዕስ ሂዱ እና ሰላም በሉ!"
-  },
+    "outro": {
+      "line1": "በማህበራችን ውስጥ ስለምትገኙ ደስ ብሎናል።",
+      "line2": "መጀመሪያ በመግቢያ ቻናል ላይ እባኮትን ራስዎን ያስተዋውቁ።"
+    }
+  }
+,
+
   
   "projects": {
   "ourProjects": "የእኛ ፕሮጀክቶች",
