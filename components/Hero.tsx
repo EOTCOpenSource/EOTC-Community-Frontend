@@ -31,8 +31,12 @@ export default function Hero() {
                 fraction={0.5}
                 triggerOnce
               >
-                <span className="block text-primary">{t("Faith Meets Code")}</span>
-                <span className="block text-primary">{t("Culture Meets Innovation")}</span>
+                <span className="block text-primary">
+                  {t("Faith Meets Code")}
+                </span>
+                <span className="block text-primary">
+                  {t("Culture Meets Innovation")}
+                </span>
               </Fade>
             </h1>
           </div>
@@ -68,8 +72,12 @@ export default function Hero() {
           <div className="text-center md:text-left max-w-xl space-y-6 md:mr-8 flex-1">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mt-8">
               <Fade delay={200} duration={1000} cascade triggerOnce>
-                <span className="block text-gray-800 pt-5">{t("Faith Meets Code")}</span>
-                <span className="block text-primary mb-5">{t("Culture Meets Innovation")}</span>
+                <span className="block text-gray-800 pt-5">
+                  {t("Faith Meets Code")}
+                </span>
+                <span className="block text-primary mb-5">
+                  {t("Culture Meets Innovation")}
+                </span>
               </Fade>
             </h1>
 
@@ -103,15 +111,15 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Decorative blob bar */}
+      {/* Decorative blob bar - full height of hero section, starts below Navbar */}
       <div
-        className="blob-bar absolute top-0 right-56 hidden md:block bg-primary z-0 mx-auto"
-        style={{ width: "16vw", height: "100vh" }}
+        className="blob-bar absolute top-24 right-56 hidden md:block bg-primary z-0 mx-auto h-full"
+        style={{ width: "16vw", height: "calc(100% - 6rem)" }}
       >
         <span
           style={{
             borderRadius: "50% 50% 0 0",
-            boxShadow: "0px -5px 8px white"
+            boxShadow: "0px -5px 8px white",
           }}
           className="absolute left-0 bottom-0 w-full h-16 rounded-[1rem 1rem] bg-gray-100 block"
         ></span>
@@ -121,7 +129,7 @@ export default function Hero() {
         className="hidden md:block bg-red-500 absolute left-0 bottom-0 w-full h-14 pointer-events-none"
         style={{
           background:
-            "linear-gradient(180deg, rgba(255, 255, 255, 0.2) 4.08%, #FFFFFF 14.95%)"
+            "linear-gradient(180deg, rgba(255, 255, 255, 0.2) 4.08%, #FFFFFF 14.95%)",
         }}
       />
     </section>
