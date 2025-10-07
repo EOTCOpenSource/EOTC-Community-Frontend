@@ -19,8 +19,24 @@ export default function Hero() {
         }}
       ></div>
 
+      <div
+        className="blob-bar absolute top-24 right-[22%] hidden md:block bg-primary z-0"
+        style={{
+          width: "9vw", 
+          height: "calc(100% - 6rem)",
+          minWidth: "120px",
+        }}
+      >
+        <span
+          style={{
+            borderRadius: "50% 50% 0 0",
+            boxShadow: "0px -5px 8px white",
+          }}
+          className="absolute left-0 bottom-0 w-full h-16 bg-gray-100 block"
+        ></span>
+      </div>
+
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        {/* Mobile */}
         <div className="md:hidden flex flex-col items-center">
           <div className="text-center max-w-2xl space-y-6">
             <h1 className="text-4xl font-bold leading-tight">
@@ -66,67 +82,51 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Desktop */}
-        <div className="hidden md:grid md:grid-cols-2 md:gap-8 items-center">
-          <div className="absolute pointer-events-none -left-10 top-1/2 -translate-y-1/2 -z-12 w-[70vw] h-[70vw] md:w-[40vw] md:h-[40vw] rounded-full bg-[#72111108]" />
-          <div className="text-center md:text-left max-w-xl space-y-6 md:mr-8 flex-1">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mt-8">
-              <Fade delay={200} duration={1000} cascade triggerOnce>
-                <span className="block text-gray-800 pt-5">
-                  {t("Faith Meets Code")}
-                </span>
-                <span className="block text-primary mb-5">
-                  {t("Culture Meets Innovation")}
-                </span>
+        {/* Desktop layout */}
+        <div className="hidden md:grid md:grid-cols-2 md:gap-8 items-center relative">
+          <div className="flex flex-col justify-center relative">
+            <div className="absolute pointer-events-none -left-10 top-1/2 -translate-y-1/2 -z-12 w-[70vw] h-[70vw] md:w-[40vw] md:h-[40vw] rounded-full bg-[#72111108]" />
+            <div className="text-center md:text-left max-w-xl space-y-6 md:mr-8 flex-1">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mt-8">
+                <Fade delay={200} duration={1000} cascade triggerOnce>
+                  <span className="block text-gray-800 pt-5">
+                    {t("Faith Meets Code")}
+                  </span>
+                  <span className="block text-primary mb-5">
+                    {t("Culture Meets Innovation")}
+                  </span>
+                </Fade>
+              </h1>
+
+              <Fade delay={940} duration={1000} cascade triggerOnce>
+                <p className="text-base sm:text-lg md:text-xl text-gray-600 py-4">
+                  {t("desktopDescription")}
+                </p>
               </Fade>
-            </h1>
 
-            <Fade delay={940} duration={1000} cascade triggerOnce>
-              <p className="text-base sm:text-lg md:text-xl text-gray-600 py-4">
-                {t("desktopDescription")}
-              </p>
-            </Fade>
-
-            <Link
-              href="https://t.me/EOTCOpenSource"
-              className="bg-primary hover:bg-primary-600 text-white font-bold py-4 px-10 my-8 rounded-full transition-colors inline-block"
-            >
-              {t("joinButtonDesktop")}
-            </Link>
+              <Link
+                href="https://t.me/EOTCOpenSource"
+                className="bg-primary hover:bg-primary-600 text-white font-bold py-4 px-10 my-8 rounded-full transition-colors inline-block"
+              >
+                {t("joinButtonDesktop")}
+              </Link>
+            </div>
           </div>
 
-          <div className="hidden md:flex flex-1 justify-center items-center mb-8 md:mb-0">
-            <div className="relative w-full flex flex-col items-center justify-center">
-              <div className="relative z-20 flex justify-center items-end w-full">
-                <Image
-                  src="/EOTC_church.png"
-                  alt="EOTC Church"
-                  width={400}
-                  height={400}
-                  className="mx-auto w-full max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl"
-                />
-              </div>
-            </div>
+          <div className="relative z-20 flex justify-center items-center">
+            <Image
+              src="/EOTC_church.png"
+              alt="EOTC Church"
+              width={440}
+              height={440}
+              className="relative z-10 max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl transform md:translate-x-6 lg:translate-x-10"
+            />
           </div>
         </div>
       </div>
 
-      {/* Decorative blob bar - full height of hero section, starts below Navbar */}
       <div
-        className="blob-bar absolute top-24 right-56 hidden md:block bg-primary z-0 mx-auto h-full"
-        style={{ width: "16vw", height: "calc(100% - 6rem)" }}
-      >
-        <span
-          style={{
-            borderRadius: "50% 50% 0 0",
-            boxShadow: "0px -5px 8px white",
-          }}
-          className="absolute left-0 bottom-0 w-full h-16 rounded-[1rem 1rem] bg-gray-100 block"
-        ></span>
-      </div>
-
-      <div
-        className="hidden md:block bg-red-500 absolute left-0 bottom-0 w-full h-14 pointer-events-none"
+        className="hidden md:block absolute left-0 bottom-0 w-full h-14 pointer-events-none"
         style={{
           background:
             "linear-gradient(180deg, rgba(255, 255, 255, 0.2) 4.08%, #FFFFFF 14.95%)",
