@@ -46,7 +46,6 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto flex items-center justify-between h-full px-6 md:px-4 lg:px-12">
-        {/* Logo */}
         <div className="flex items-center gap-4 md:gap-0 justify-between w-full">
           <div className="flex items-center">
             <Image
@@ -81,6 +80,8 @@ export default function Navbar() {
               <div className="flex items-center md:gap-4 lg:gap-6">
                 <Link
                   href="https://github.com/EOTCOpenSource"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:opacity-80 transition flex gap-1"
                 >
                   <GithubIcon /> {t("members", { count: gitMembers })}
@@ -95,7 +96,6 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Join Button */}
           <div className="w-[8rem] hidden md:flex md:w-[15%] lg:w-[12%] justify-end">
             <Link
               href="https://t.me/EOTCOpenSource"
@@ -149,6 +149,8 @@ export default function Navbar() {
           </button>
           <Link
             href="https://github.com/EOTCOpenSource"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex gap-1 text-primary font-medium py-2 px-4 rounded-lg hover:bg-gray-50 transition-colors"
             onClick={() => setIsOpen(false)}
           >
