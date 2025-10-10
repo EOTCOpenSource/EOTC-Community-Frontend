@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { NextIntlClientProvider } from "next-intl";
+import { ThemeProvider } from "next-themes"; 
 import { timeZone } from "../i18n/config";
 
 export default function RootLayoutClient({
@@ -37,12 +38,18 @@ export default function RootLayoutClient({
   }, []);
 
   return (
-    <NextIntlClientProvider
-      locale={locale}
-      messages={messages}
-      timeZone={timeZone}
+    <ThemeProvider
+      attribute="class" 
+      defaultTheme="light"
+      enableSystem={false} 
     >
-      {children}
-    </NextIntlClientProvider>
+      <NextIntlClientProvider
+        locale={locale}
+        messages={messages}
+        timeZone={timeZone}
+      >
+        {children}
+      </NextIntlClientProvider>
+    </ThemeProvider>
   );
 }

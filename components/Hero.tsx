@@ -9,7 +9,7 @@ export default function Hero() {
   const t = useTranslations("hero");
 
   return (
-    <section className="relative w-full bg-gray-50 pt-24 min-h-screen pb-16 overflow-hidden flex flex-col justify-center">
+    <section className="relative w-full bg-gray-50 dark:bg-[#0F0F0F] pt-24 min-h-screen pb-16 overflow-hidden flex flex-col justify-center transition-colors duration-500">
       {/* Mobile background blob */}
       <div
         className="absolute md:hidden w-[100px] left-1/2 transform -translate-x-1/2 top-0 bottom-0 z-0"
@@ -19,10 +19,11 @@ export default function Hero() {
         }}
       ></div>
 
+      {/* Right-side blob bar */}
       <div
-        className="blob-bar absolute top-24 right-[22%] hidden md:block bg-primary z-0"
+        className="blob-bar absolute top-24 right-[22%] hidden md:block bg-primary dark:bg-[#A01818] z-0"
         style={{
-          width: "9vw", 
+          width: "9vw",
           height: "calc(100% - 6rem)",
           minWidth: "120px",
         }}
@@ -32,11 +33,13 @@ export default function Hero() {
             borderRadius: "50% 50% 0 0",
             boxShadow: "0px -5px 8px white",
           }}
-          className="absolute left-0 bottom-0 w-full h-16 bg-gray-100 block"
+          className="absolute left-0 bottom-0 w-full h-16 bg-gray-100 dark:bg-[#1a1a1a] block"
         ></span>
       </div>
 
+      {/* Main container */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        {/* Mobile layout */}
         <div className="md:hidden flex flex-col items-center">
           <div className="text-center max-w-2xl space-y-6">
             <h1 className="text-4xl font-bold leading-tight">
@@ -47,10 +50,10 @@ export default function Hero() {
                 fraction={0.5}
                 triggerOnce
               >
-                <span className="block text-primary">
+                <span className="block text-primary dark:text-gray-100">
                   {t("Faith Meets Code")}
                 </span>
-                <span className="block text-primary">
+                <span className="block text-[#721111] dark:text-#A01818 ">
                   {t("Culture Meets Innovation")}
                 </span>
               </Fade>
@@ -70,12 +73,12 @@ export default function Hero() {
           </div>
 
           <div className="text-center max-w-2xl">
-            <p className="text-lg text-[#000000] mb-6">
+            <p className="text-lg text-[#000000] dark:text-gray-300 mb-6">
               {t("mobileDescription")}
             </p>
             <Link
               href="https://t.me/EOTCOpenSource"
-              className="mt-8 bg-primary hover:bg-primary-600 text-white font-bold py-3 px-8 rounded-full transition-colors inline-block"
+              className="mt-8 bg-primary hover:bg-primary-600 dark:bg-[#A01818] dark:hover:bg-[#c72222] text-white font-bold py-3 px-8 rounded-full transition-colors inline-block"
             >
               {t("joinButton")}
             </Link>
@@ -85,28 +88,28 @@ export default function Hero() {
         {/* Desktop layout */}
         <div className="hidden md:grid md:grid-cols-2 md:gap-8 items-center relative">
           <div className="flex flex-col justify-center relative">
-            <div className="absolute pointer-events-none -left-10 top-1/2 -translate-y-1/2 -z-12 w-[70vw] h-[70vw] md:w-[40vw] md:h-[40vw] rounded-full bg-[#72111108]" />
+            <div className="absolute pointer-events-none -left-10 top-1/2 -translate-y-1/2 -z-12 w-[70vw] h-[70vw] md:w-[40vw] md:h-[40vw] rounded-full bg-[#72111108] dark:bg-[#A0181808]" />
             <div className="text-center md:text-left max-w-xl space-y-6 md:mr-8 flex-1">
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mt-8">
                 <Fade delay={200} duration={1000} cascade triggerOnce>
-                  <span className="block text-gray-800 pt-5">
+                  <span className="block text-gray-800 dark:text-gray-100 pt-5">
                     {t("Faith Meets Code")}
                   </span>
-                  <span className="block text-primary mb-5">
+                  <span className="block text-[#721111] dark:text-#A01818 mb-5">
                     {t("Culture Meets Innovation")}
                   </span>
                 </Fade>
               </h1>
 
               <Fade delay={940} duration={1000} cascade triggerOnce>
-                <p className="text-base sm:text-lg md:text-xl text-gray-600 py-4">
+                <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 py-4">
                   {t("desktopDescription")}
                 </p>
               </Fade>
 
               <Link
                 href="https://t.me/EOTCOpenSource"
-                className="bg-primary hover:bg-primary-600 text-white font-bold py-4 px-10 my-8 rounded-full transition-colors inline-block"
+                className="bg-primary hover:bg-primary-600 dark:bg-[#A01818] dark:hover:bg-[#c72222] text-white font-bold py-4 px-10 my-8 rounded-full transition-colors inline-block"
               >
                 {t("joinButtonDesktop")}
               </Link>
@@ -125,8 +128,9 @@ export default function Hero() {
         </div>
       </div>
 
+      {/* Bottom gradient */}
       <div
-        className="hidden md:block absolute left-0 bottom-0 w-full h-14 pointer-events-none"
+        className="hidden md:block absolute left-0 bottom-0 w-full h-14 pointer-events-none dark:hidden"
         style={{
           background:
             "linear-gradient(180deg, rgba(255, 255, 255, 0.2) 4.08%, #FFFFFF 14.95%)",
