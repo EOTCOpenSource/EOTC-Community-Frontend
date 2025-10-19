@@ -51,7 +51,6 @@ export default function Navbar() {
     >
       <div className="mx-auto flex items-center justify-between h-full px-6 md:px-4 lg:px-12">
         <div className="flex items-center gap-4 md:gap-0 justify-between w-full">
-          {/* Logo */}
           <div className="flex items-center">
             <Image
               src="/EOTC_logo.png"
@@ -113,7 +112,6 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Join Button */}
           <div className="w-[8rem] hidden md:flex md:w-[15%] lg:w-[12%] justify-end">
             <Link
               href="https://t.me/EOTCOpenSource"

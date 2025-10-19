@@ -17,7 +17,7 @@ type Project = {
 };
 
 export default function Projects() {
-  const t = useTranslations("projects"); 
+  const t = useTranslations("projects");
 
   const [activeTab, setActiveTab] = useState<"all" | "active" | "completed" | "pending">("all");
   const [activeType, setActiveType] = useState<"all" | "website" | "application">("all");
@@ -109,30 +109,33 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects-section" className="w-full bg-white py-16 md:py-24 px-6 md:px-12">
+    <section
+      id="projects-section"
+      className="w-full bg-white dark:bg-[#0F0F0F] transition-colors duration-500 py-16 md:py-24 px-6 md:px-12"
+    >
       <div className="container mx-auto max-w-6xl">
-        {/* Heading */}
         <div className="text-center mb-12 md:mb-16">
           <Fade delay={200} duration={1000} triggerOnce fraction={0.5} cascade>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4 transition-colors duration-500">
               {t("ourProjects")}
             </h2>
-            <p className="text-xl md:text-2xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto transition-colors duration-500">
               {t("description")}
             </p>
           </Fade>
         </div>
 
-        {/* Status Filters */}
         <div className="flex flex-wrap justify-center gap-4 mb-6">
-          {["allProjects","active","completed","pending"].map((status) => (
+          {["allProjects", "active", "completed", "pending"].map((status) => (
             <button
               key={status}
-              onClick={() => handleFilterClick("status", status === "allProjects" ? "all" : status)}
-              className={`px-6 py-2 rounded-full font-medium ${
+              onClick={() =>
+                handleFilterClick("status", status === "allProjects" ? "all" : status)
+              }
+              className={`px-6 py-2 rounded-full font-medium transition-colors duration-300 ${
                 activeTab === (status === "allProjects" ? "all" : status)
                   ? "bg-[#721111] text-white"
-                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                  : "bg-gray-100 dark:bg-[#181818] text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-[#252525]"
               }`}
             >
               {t(`filters.${status}`)}
@@ -140,16 +143,17 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* Type Filters */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {["allTypes","website","application"].map((type) => (
+          {["allTypes", "website", "application"].map((type) => (
             <button
               key={type}
-              onClick={() => handleFilterClick("projectType", type === "allTypes" ? "all" : type)}
-              className={`px-6 py-2 rounded-full font-medium ${
+              onClick={() =>
+                handleFilterClick("projectType", type === "allTypes" ? "all" : type)
+              }
+              className={`px-6 py-2 rounded-full font-medium transition-colors duration-300 ${
                 activeType === (type === "allTypes" ? "all" : type)
                   ? "bg-[#721111] text-white"
-                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                  : "bg-gray-100 dark:bg-[#181818] text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-[#252525]"
               }`}
             >
               {t(`filters.${type}`)}
@@ -157,12 +161,14 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <Fade delay={100} duration={600} triggerOnce fraction={0.5} cascade>
             {filteredProjects.map((project) => (
-              <div key={project.id} className="bg-white rounded-xl border border-gray-200 hover:shadow-md transition-all overflow-hidden">
-                <div className="relative w-full h-48 bg-gray-100">
+              <div
+                key={project.id}
+                className="bg-white dark:bg-[#181818] rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-md transition-all overflow-hidden"
+              >
+                <div className="relative w-full h-48 bg-gray-100 dark:bg-[#252525]">
                   <Image
                     src={project.mockupImage}
                     alt={`${project.title} mockup`}
@@ -180,8 +186,12 @@ export default function Projects() {
                       {t(`type.${project.type}`)}
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
-                  <p className="text-gray-600 mb-4">{project.description}</p>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2 transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400 mb-4 transition-colors">
+                    {project.description}
+                  </p>
                   {project.status === "completed" && project.liveUrl && (
                     <Link
                       href={project.liveUrl}
@@ -198,7 +208,6 @@ export default function Projects() {
           </Fade>
         </div>
 
-        {/* View All Button */}
         <div className="text-center">
           <button
             onClick={handleViewAll}

@@ -9,7 +9,7 @@ export default function Footer() {
   const t = useTranslations("footer");
 
   return (
-    <footer className="w-full bg-[#181818] py-24">
+    <footer className="w-full bg-[#181818] dark:bg-white text-white dark:text-black py-24 transition-colors duration-500">
       <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between">
         <div className="flex items-center space-x-4 mb-6 md:mb-0">
           <Image
@@ -18,25 +18,27 @@ export default function Footer() {
             width={60}
             height={60}
           />
-          <span className="text-2xl font-bold text-white">{t("brand")}</span>
+          <span className="text-2xl font-bold text-white dark:text-black transition-colors duration-500">
+            {t("brand")}
+          </span>
         </div>
 
-        <nav className="flex gap-6 text-white font-medium flex-wrap justify-center md:justify-start">
+        <nav className="flex gap-6 text-white dark:text-black font-medium flex-wrap justify-center md:justify-start transition-colors duration-500">
           <Link
             href="/terms"
-            className="hover:opacity-80 transition-colors duration-200"
+            className="hover:text-[#A01818] transition-colors duration-300"
           >
             {t("terms")}
           </Link>
           <Link
             href="/"
-            className="hover:opacity-80 transition-colors duration-200"
+            className="hover:text-[#A01818] transition-colors duration-300"
           >
             {t("home")}
           </Link>
           <Link
             href="/about"
-            className="hover:opacity-80 transition-colors duration-200"
+            className="hover:text-[#A01818] transition-colors duration-300"
           >
             {t("about")}
           </Link>
@@ -44,7 +46,7 @@ export default function Footer() {
             href="https://t.me/EOTCOpenSource"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:opacity-80 transition-colors duration-200"
+            className="hover:text-[#A01818] transition-colors duration-300"
           >
             {t("community")}
           </Link>
@@ -55,7 +57,7 @@ export default function Footer() {
             href="https://www.linkedin.com/company/eotc-open-source/?viewAsMember=true"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white hover:text-gray-400 transition"
+            className="text-white dark:text-black hover:text-[#A01818] transition-colors duration-300"
             aria-label="LinkedIn"
           >
             <Linkedin size={28} />
@@ -65,7 +67,7 @@ export default function Footer() {
             href="https://github.com/EOTCOpenSource"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white hover:text-gray-400 transition"
+            className="text-white dark:text-black hover:text-[#A01818] transition-colors duration-300"
             aria-label="GitHub"
           >
             <Github size={28} />
@@ -75,15 +77,15 @@ export default function Footer() {
             href="https://t.me/EOTCOpenSource"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#721111] hover:bg-[#5a0d0d] text-white font-bold py-2 px-6 rounded-full transition-colors shadow-lg inline-block"
+            className="bg-[#721111] hover:bg-[#5a0d0d] text-white font-bold py-2 px-6 rounded-full transition-colors duration-300 shadow-lg inline-block"
           >
             {t("join")}
           </Link>
         </div>
       </div>
 
-      <div className="container mx-auto px-6 md:px-12 mt-12 pt-6 border-t border-gray-700">
-        <p className="text-gray-400 text-center text-sm">
+      <div className="container mx-auto px-6 md:px-12 mt-12 pt-6 border-t border-gray-700 dark:border-gray-300 transition-colors duration-500">
+        <p className="text-gray-400 dark:text-gray-600 text-center text-sm transition-colors duration-500">
           &copy; {new Date().getFullYear()} {t("brand")}. {t("rights")}
         </p>
       </div>

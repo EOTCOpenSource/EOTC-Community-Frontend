@@ -27,25 +27,23 @@ export default function CommunityIntro() {
   ];
 
   return (
-    <section className="w-full bg-[#F9FAFB] py-16 px-6 md:px-12 relative">
+    <section className="w-full bg-[#F9FAFB] dark:bg-[#0F0F0F] py-16 px-6 md:px-12 relative transition-colors duration-500">
       <div className="container mx-auto max-w-6xl relative">
-        
-        {/* Header */}
         <div className="text-center mb-16">
           <Fade delay={200} duration={1000} triggerOnce fraction={0.5}>
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary dark:text-[#A01818] mb-4">
               {t("title")}
             </h2>
           </Fade>
           <Fade delay={400} duration={1000} triggerOnce fraction={0.5}>
-            <p className="text-lg text-gray-700">{t("subtitle")}</p>
+            <p className="text-lg text-gray-700 dark:text-gray-300">{t("subtitle")}</p>
           </Fade>
         </div>
 
         {/* Middle Road Separator */}
         <div className="relative mt-12 mb-20">
           <div
-            className="absolute hidden md:flex flex-col items-center pt-14 gap-16 bg-primary w-[100px] overflow-hidden rounded-[10px]"
+            className="absolute hidden md:flex flex-col items-center pt-14 gap-16 bg-primary dark:bg-[#A01818] w-[100px] overflow-hidden rounded-[10px]"
             style={{
               left: "50%",
               top: "-50px",
@@ -54,7 +52,7 @@ export default function CommunityIntro() {
             }}
           >
             {[...Array(4)].map((_, i) => (
-              <span key={i} className="w-1 h-[8rem] bg-gray-50"></span>
+              <span key={i} className="w-1 h-[8rem] bg-gray-50 dark:bg-[#1a1a1a]"></span>
             ))}
           </div>
 
@@ -62,27 +60,31 @@ export default function CommunityIntro() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-64 gap-y-12 relative z-10">
             {/* Left column: odd IDs */}
             <div className="space-y-12">
-              {channels.filter(c => c.id % 2 !== 0).map((channel, i) => (
-                <Slide direction="left" triggerOnce key={channel.id} delay={i * 150}>
-                  <ChannelItem channel={channel} index={i} />
-                </Slide>
-              ))}
+              {channels
+                .filter((c) => c.id % 2 !== 0)
+                .map((channel, i) => (
+                  <Slide direction="left" triggerOnce key={channel.id} delay={i * 150}>
+                    <ChannelItem channel={channel} index={i} />
+                  </Slide>
+                ))}
             </div>
 
             {/* Right column: even IDs */}
             <div className="space-y-12 mt-12">
-              {channels.filter(c => c.id % 2 === 0).map((channel, i) => (
-                <Slide direction="right" triggerOnce key={channel.id} delay={i * 150}>
-                  <ChannelItem channel={channel} index={i} />
-                </Slide>
-              ))}
+              {channels
+                .filter((c) => c.id % 2 === 0)
+                .map((channel, i) => (
+                  <Slide direction="right" triggerOnce key={channel.id} delay={i * 150}>
+                    <ChannelItem channel={channel} index={i} />
+                  </Slide>
+                ))}
             </div>
           </div>
         </div>
 
         {/* Footer Text */}
         <div className="text-center mt-20">
-          <p className="text-lg text-gray-700">
+          <p className="text-lg text-gray-700 dark:text-gray-300">
             {t("outro.line1")} <br /> {t("outro.line2")}
           </p>
         </div>
@@ -106,7 +108,7 @@ function ChannelItem({ channel, index }: { channel: Channel; index: number }) {
         />
       </div>
       <div className="mt-[-20px]">
-        <h3 className="text-xl font-bold text-primary mb-4">
+        <h3 className="text-xl font-bold text-primary dark:text-[#A01818] mb-4">
           <Link
             href={channel.link}
             target="_blank"
@@ -118,7 +120,7 @@ function ChannelItem({ channel, index }: { channel: Channel; index: number }) {
             {t(`${channel.name}.name`)}
           </Link>
         </h3>
-        <p className="text-gray-600 mt-0.5">
+        <p className="text-gray-600 dark:text-gray-300 mt-0.5">
           {t(`${channel.name}.description`)}
         </p>
       </div>

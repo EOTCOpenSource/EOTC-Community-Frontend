@@ -10,7 +10,6 @@ export default function Hero() {
 
   return (
     <section className="relative w-full bg-gray-50 dark:bg-[#0F0F0F] pt-24 min-h-screen pb-16 overflow-hidden flex flex-col justify-center transition-colors duration-500">
-      {/* Mobile background blob */}
       <div
         className="absolute md:hidden w-[100px] left-1/2 transform -translate-x-1/2 top-0 bottom-0 z-0"
         style={{
@@ -19,7 +18,6 @@ export default function Hero() {
         }}
       ></div>
 
-      {/* Right-side blob bar */}
       <div
         className="blob-bar absolute top-24 right-[22%] hidden md:block bg-primary dark:bg-[#A01818] z-0"
         style={{
@@ -127,8 +125,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
-
-      {/* Bottom gradient */}
+    
       <div
         className="hidden md:block absolute left-0 bottom-0 w-full h-14 pointer-events-none dark:hidden"
         style={{
